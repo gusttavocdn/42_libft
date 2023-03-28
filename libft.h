@@ -121,7 +121,7 @@ int ft_strncmp(const char *s1, const char *s2, size_t n);
 void *ft_memset(void *s, int c, size_t n);
 
 /**
-* @brief This erases in some memory area. Thema are to be
+* @brief This erases in some memory area. Them are to be
 * deleted is passed as n bytes
 * @param s The area to be erased
 * @param n The number of bytes to be erased
