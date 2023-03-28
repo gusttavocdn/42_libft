@@ -7,7 +7,7 @@
 *.d
 
 # Object files
-*.o
+*.o.
 *.ko
 *.obj
 *.elf
@@ -57,5 +57,8 @@ Mkfile.old
 dkms.conf
 main
 main.c
+libft.a
+*.o
+.idea
 
 # End of https://www.toptal.com/developers/gitignore/api/c
