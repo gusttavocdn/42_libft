@@ -9,5 +9,5 @@ int ft_strncmp(const char *s1, const char *s2, size_t n)
 		n--;
 	}
 	if (n == 0) return (0);
-	return ((size_t) *s1 - (size_t) *s2);
+	return ((unsigned char) *s1 - (unsigned char) *s2);
 }
