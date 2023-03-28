@@ -115,7 +115,7 @@ int ft_strncmp(const char *s1, const char *s2, size_t n);
 /**
 * @brief This functions fill the n bytes of a string with the C parameter
 * @param s The string that will be filled
-* @param c The C parameter to fill. The valor is passed as Int
+* @param c The parameter to fill. The valor is passed as Int
 * but is converted to char
 */
 void *ft_memset(void *s, int c, size_t n);
@@ -129,10 +129,10 @@ void *ft_memset(void *s, int c, size_t n);
 void ft_bzero(void *s, size_t n);
 
 /**
- * @brief This function copys a memory area to other memory area.
+ * @brief This function copy a memory area to other memory area.
  * Don't use if the memory area might overlap.
  * In this case, use memmove instead.
- * @param dest dest area to receive thec copy
+ * @param dest dest area to receive the copy
  * @param src source area to copy
  * @param n n bytes that will be copied to dest
  * @return returns a void pointer to dest.
@@ -150,17 +150,6 @@ void *ft_memcpy(void *dest, const void *src, size_t n);
  */
 void *ft_memmove(void *dest, void *src, size_t n);
 
-/**
- * @brief This functions concatenate two strings
- * @param dst The string that will act like the buffer to concatenation.
- * @param src The string that will be concatenate to the buffer.
- * @param size This has to be the buffer size in order for the
- * concatenation occurs well.
- * @return The function returns the length of
- * the new string that the buffer will receive.
- * Notice that the return doesn't count
- * the NULL character that has to be in the end.
- */
 
 /**
  * @brief This functions scans until n bytes of a memory area searching for
