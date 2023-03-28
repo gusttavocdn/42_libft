@@ -75,7 +75,7 @@ char *ft_strnstr(const char *big, const char *little, size_t len);
 // Function from <string.h> library
 
 /**
-* @brief Return the lenght of a string. Dont' count the '\0' (null character).
+* @brief Return the length of a string. Dont' count the '\0' (null character).
 */
 size_t ft_strlen(const char *s);
 
@@ -83,7 +83,7 @@ size_t ft_strlen(const char *s);
  * @brief This functions founds an c character in a string.
  *
  * @param s The string to search
- * @param c The caracter to search for in the string
+ * @param c The char to search for in the string
  * @return Returns a pointer to the character if found.
  *  Returns NULL if not found.
  * If c == '\0' returns a pointer to the end of the string.
@@ -91,11 +91,11 @@ size_t ft_strlen(const char *s);
 char *ft_strchr(const char *str, int c);
 
 /**
- * @brief This functions founds the last ocorrence of an c character in a string.
+ * @brief This functions founds the last occurrence of an c character in a string.
  *
  * @param s The string to search
- * @param c The caracter to search for in the string
- * @return Returns a pointer to the last ocorrence
+ * @param c The character to search for in the string
+ * @return Returns a pointer to the last occurrence
  * of the character if found.
  *  Returns NULL if not found.
  * If c == '\0' returns a pointer to the end of the string.
@@ -215,16 +215,16 @@ char *ft_strjoin(char const *s1, char const *s2);
 
 /**
  * @brief This functions returns a new string with chars
- * specified in set removed from the start and end of the strin
+ * specified in set removed from the start and end of the string
  *
  * @param s1 String to be trimmed.
- * @param set Chars to trim from the strin
+ * @param set Chars to trim from the string
  * @return Returns the new string or NULL if malloc fails.
  */
 char *ft_strtrim(char const *s1, char const *set);
 
 /**
- * @brief This functions returns a trinsg representing the integer receveid
+ * @brief This functions returns a string representing the integer received
  * as argument. Negative numbers are handled.
  *
  * @param n The integer to convert
