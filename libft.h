@@ -5,6 +5,12 @@
 # include <unistd.h>
 # include <stdarg.h>
 
+typedef struct s_list
+{
+	void *content;
+	struct s_list *next;
+} t_list;
+
 // Functions from <type.h> library
 /**
  * @brief This functions verify if a char is character from a-Z

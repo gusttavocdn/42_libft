@@ -15,7 +15,8 @@ SRC = ft_isalpha.c ft_isdigit.c \
 	ft_strrchr.c ft_strtrim.c \
 	ft_substr.c ft_tolower.c \
 	ft_toupper.c ft_strlcat.c \
-	ft_memcpy.c \
+	ft_memcpy.c ft_strmapi.c \
+	ft_striteri.c \
 
 OBJS = ${SRC:.c=.o}
 
@@ -34,7 +35,7 @@ ${NAME}: ${OBJS} ${HEADER}
 	$(CC) $(FLAGS) -c $< -o ${<:.c=.o}
 
 clean:
-	${RM} ${OBJS}
+	${RM} ${OBJS} libft.so a.out
 
 fclean: clean
 	${RM} ${NAME}
