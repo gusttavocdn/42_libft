@@ -16,7 +16,19 @@ SRC = ft_isalpha.c ft_isdigit.c \
 	ft_substr.c ft_tolower.c \
 	ft_toupper.c ft_strlcat.c \
 	ft_memcpy.c ft_strmapi.c \
-	ft_striteri.c \
+	ft_striteri.c ft_lstnew.c \
+	ft_lstadd_front.c  ft_lstsize.c \
+	ft_lstlast.c ft_lstadd_back.c \
+	ft_lstdelone.c  ft_lstclear.c  \
+	ft_lstmap.c ft_lstiter.c \
+	ft_split.c \
+
+SRC_B = ft_lstnew.c ft_lstadd_front.c \
+		ft_lstsize.c  ft_lstlast.c \
+		ft_lstadd_back.c  ft_lstdelone.c \
+		ft_lstmap.c ft_lstiter.c \
+		ft_lstclear.c \
+B_OBJS = ${SRC_B:.c=.o}
 
 OBJS = ${SRC:.c=.o}
 
@@ -30,6 +42,9 @@ all:	${NAME}
 
 ${NAME}: ${OBJS} ${HEADER}
 	ar -rcs ${NAME} ${OBJS} ${HEADER}
+
+bonus: ${NAME} ${B_OBJS}
+	ar -rcs ${NAME} ${B_OBJS}
 
 .c.o:
 	$(CC) $(FLAGS) -c $< -o ${<:.c=.o}

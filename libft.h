@@ -306,4 +306,88 @@ void ft_putnbr_fd(int n, int fd);
  */
 char **ft_split(char const *s, char c);
 
+// Functions to handle Linked Lists
+
+/**
+ * @brief Allocates (with malloc(3)) and returns a new node.
+ * The member variable ’content’ is initialized with
+ * the value of the parameter ’content’. The variable
+ * ’next’ is initialized to NULL.
+ * @param content The content to create the node with.
+ * @return Thew new node
+ */
+t_list *ft_lstnew(void *content);
+
+/**
+ * @brief Adds the node ’new’ at the beginning of the list.
+ * @param lst The address of a pointer to the first link of
+ * a list.
+ * @param new The address of a pointer to the node to be
+ * added to the list.
+ */
+void ft_lstadd_front(t_list **lst, t_list *new);
+
+/**
+ * @brief Counts the number of nodes in a list.
+ * @param lst The beginning of the list.
+ * @return The length of the list
+ */
+int ft_lstsize(t_list *lst);
+
+/**
+ * @brief Returns the last node of the list.
+ * @param lst The beginning of the list.
+ * @return Last node of the list
+ */
+t_list *ft_lstlast(t_list *lst);
+
+/**
+ * @brief Adds the node ’new’ at the end of the list.
+ * @param lst The address of a pointer to the first link of
+ * a list.
+ * @param new The address of a pointer to the node to be
+ * added to the list.
+ */
+void ft_lstadd_back(t_list **lst, t_list *new);
+
+/**
+ *
+ * @param lst The node to free.
+ * @param del The address of the function used to delete
+ * the content.
+ */
+void ft_lstdelone(t_list *lst, void (*del)(void *));
+
+/**
+ *
+ * @param lst The address of a pointer to a node.
+ * @param del The address of the function used to delete
+ * the content of the node.
+ */
+void ft_lstclear(t_list **lst, void (*del)(void *));
+
+/**
+ *
+ * @param lst The address of a pointer to a node.
+ * @param f The address of the function used to iterate on
+ * the list.
+ */
+void ft_lstiter(t_list *lst, void (*f)(void *));
+
+/**
+ * @brief Iterates the list ’lst’ and applies the function
+ * ’f’ on the content of each node. Creates a new
+ * list resulting of the successive applications of
+ * the function ’f’. The ’del’ function is used to
+ * delete the content of a node if needed.
+ * @param lst The address of a pointer to a node.
+ * @param f The address of the function used to iterate on
+ * the list.
+ * @param del The address of the function used to delete
+ * the content of a node if needed.
+ * @return The new list.
+ * NULL if the allocation fails.
+ */
+t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
 #endif
