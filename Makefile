@@ -21,13 +21,14 @@ SRC = ft_isalpha.c ft_isdigit.c \
 	ft_lstlast.c ft_lstadd_back.c \
 	ft_lstdelone.c  ft_lstclear.c  \
 	ft_lstmap.c ft_lstiter.c \
-	ft_split.c \
+	ft_split.c get_next_line.c \
 
 SRC_B = ft_lstnew.c ft_lstadd_front.c \
 		ft_lstsize.c  ft_lstlast.c \
 		ft_lstadd_back.c  ft_lstdelone.c \
 		ft_lstmap.c ft_lstiter.c \
-		ft_lstclear.c \
+		ft_lstclear.c get_next_line.c \
+
 B_OBJS = ${SRC_B:.c=.o}
 
 OBJS = ${SRC:.c=.o}
@@ -40,12 +41,13 @@ HEADER = libft.h
 
 all:	${NAME}
 
-${NAME}: ${OBJS} ${HEADER}
-	ar -rcs ${NAME} ${OBJS} ${HEADER}
+${NAME}: ${OBJS} ${B_OBJS} ${HEADER}
+	ar -rcs ${NAME} ${OBJS} ${B_OBJS} ${HEADER}
 
-bonus: ${NAME} ${B_OBJS}
-	ar -rcs ${NAME} ${B_OBJS}
+# bonus: ${NAME} ${B_OBJS}
+# 	ar -rcs ${NAME} ${B_OBJS}
 
+# Tell make how to transform a .c file into a object file
 .c.o:
 	$(CC) $(FLAGS) -c $< -o ${<:.c=.o}
 

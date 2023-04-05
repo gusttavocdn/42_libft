@@ -1,9 +1,11 @@
 #ifndef LIBFT_H
 #define LIBFT_H
 
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdarg.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <stdarg.h>
+
+#define BUFFER_SIZE 42
 
 typedef struct s_list
 {
@@ -81,8 +83,8 @@ char *ft_strnstr(const char *big, const char *little, size_t len);
 // Function from <string.h> library
 
 /**
-* @brief Return the length of a string. Dont' count the '\0' (null character).
-*/
+ * @brief Return the length of a string. Dont' count the '\0' (null character).
+ */
 size_t ft_strlen(const char *s);
 
 /**
@@ -109,29 +111,29 @@ char *ft_strchr(const char *str, int c);
 char *ft_strrchr(const char *str, int c);
 
 /**
-* @brief Compares two strings and returns the result for s1 - s2
-*
-* @param s1 The first string to compare
-* @param s2 The second string
-* @param n Says until we want to compare the two strings
-* @return The result of the comparison
-*/
+ * @brief Compares two strings and returns the result for s1 - s2
+ *
+ * @param s1 The first string to compare
+ * @param s2 The second string
+ * @param n Says until we want to compare the two strings
+ * @return The result of the comparison
+ */
 int ft_strncmp(const char *s1, const char *s2, size_t n);
 
 /**
-* @brief This functions fill the n bytes of a string with the C parameter
-* @param s The string that will be filled
-* @param c The parameter to fill. The valor is passed as Int
-* but is converted to char
-*/
+ * @brief This functions fill the n bytes of a string with the C parameter
+ * @param s The string that will be filled
+ * @param c The parameter to fill. The valor is passed as Int
+ * but is converted to char
+ */
 void *ft_memset(void *s, int c, size_t n);
 
 /**
-* @brief This erases in some memory area. Them are to be
-* deleted is passed as n bytes
-* @param s The area to be erased
-* @param n The number of bytes to be erased
-*/
+ * @brief This erases in some memory area. Them are to be
+ * deleted is passed as n bytes
+ * @param s The area to be erased
+ * @param n The number of bytes to be erased
+ */
 void ft_bzero(void *s, size_t n);
 
 /**
@@ -155,7 +157,6 @@ void *ft_memcpy(void *dest, const void *src, size_t n);
  * @return Returns a void pointer to dest
  */
 void *ft_memmove(void *dest, void *src, size_t n);
-
 
 /**
  * @brief This functions scans until n bytes of a memory area searching for
@@ -389,5 +390,16 @@ void ft_lstiter(t_list *lst, void (*f)(void *));
  * NULL if the allocation fails.
  */
 t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+// Extensions Functions
+
+/**
+ * @brief This functions can read a line from a file descriptor.
+ *
+ * @param fd The file descriptor to read from.
+ * @return The line read. NULL if there is nothing
+ * else to read, or an error occurred.
+ */
+char *get_next_line(int fd);
 
 #endif
