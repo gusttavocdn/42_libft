@@ -60,5 +60,6 @@ main.c
 libft.a
 *.o
 .idea
+.vscode
 
 # End of https://www.toptal.com/developers/gitignore/api/c
