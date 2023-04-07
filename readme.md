@@ -109,7 +109,15 @@ aumentando suas funcionalidades.
 
 - **ft_lstmap** - Aplica uma função a cada elemento de uma lista e retorna uma uma nova lista com as aplicações.
 
-<h1 align="center"><strong>Principais Conceitos Aprendidos</strong></h2>
+## Funções Extras
+
+- **get_next_line** - Função que le um arquivo uma linha por vez.
+- **ft_ftprintf** - Função que exibe uma string formatada na tela.
+- **ft_put_unsigned_fd** - Exibe um unsigned int em um fd.
+- **ft_print_hex_nbr** - Exibe um numero em hexadecimal no stdout.
+- **ft_print_hex_memory** - Exibe um ponto de memoria em hexadecimal na tela.
+
+<h2 align="center"><strong>Principais Conceitos Aprendidos</strong></h2>
 
 - Criação de algoritmos.
 - Estrutura de dados (Linked Lists)

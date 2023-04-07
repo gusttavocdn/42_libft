@@ -268,7 +268,7 @@ void ft_striteri(char *s, void (*f)(unsigned int, char *));
  * @param c The char to output
  * @param fd the file descriptor on which to write
  */
-void ft_putchar_fd(char c, int fd);
+int ft_putchar_fd(char c, int fd);
 
 /**
  * @brief Outputs the string "s" to the given file descriptor
@@ -276,7 +276,7 @@ void ft_putchar_fd(char c, int fd);
  * @param s The string to output
  * @param fd The file descriptor on which to write
  */
-void ft_putstr_fd(char *s, int fd);
+int ft_putstr_fd(char *s, int fd);
 
 /**
  * @brief Outputs the string "s" to the given file descriptor
@@ -293,7 +293,7 @@ void ft_putendl_fd(char *s, int fd);
  * @param n The integer to output
  * @param fd The file descriptor on which to write
  */
-void ft_putnbr_fd(int n, int fd);
+int ft_putnbr_fd(int n, int fd);
 
 /**
  * @brief This function returns an array
@@ -401,5 +401,38 @@ t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
  * else to read, or an error occurred.
  */
 char *get_next_line(int fd);
+
+/**
+ * @brief ft_printf is a recoded version of printf function from stdio.
+ * It acts just like the original unless for the fact that it does not do the buffer management like
+ * real printf
+ * @param format the format string
+ * @param ... the arguments
+ * @return the number of characters printed
+ */
+int ft_printf(const char *format, ...);
+
+/**
+ * @brief Prints the pointer memory address in hexadecimal
+ * @param pointer The pointer to print
+ * @return The number of characters printed
+ */
+int ft_print_hex_memory(void *pointer);
+
+/**
+ * @brief Prints a unsigned int on stdout
+ * @param number the number to be printed
+ * @param type the case to print the number x for lower and X for upper case.
+ * @return the number of chars printed
+ */
+int ft_print_hex_nbr(unsigned int number, char type);
+
+/**
+ * @brief Print an unsigned in on fd.
+ * @param n the number to be printed
+ * @param fd The fd where the number will be printed
+ * @return the number of chars printed
+ */
+int ft_put_unsigned_fd(int n, int fd);
 
 #endif

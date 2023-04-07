@@ -11,7 +11,7 @@ char *ft_itoa(int n)
 
 	nb = n;
 	size = ft_find_size(nb);
-	str = (char *) ft_calloc(size, sizeof(char));
+	str = (char *)ft_calloc(size, sizeof(char));
 	if (nb == 0)
 		str[0] = '0';
 	if (!str)
