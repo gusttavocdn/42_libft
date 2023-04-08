@@ -22,16 +22,8 @@ SRC = ft_isalpha.c ft_isdigit.c \
 	ft_lstdelone.c  ft_lstclear.c  \
 	ft_lstmap.c ft_lstiter.c \
 	ft_split.c get_next_line.c \
-	ft_print_f.c ft_print_hex_memory.c \
+	ft_printf.c ft_print_hex_memory.c \
 	ft_print_unsigned_fd.c ft_print_hex_nbr.c
-
-SRC_B = ft_lstnew.c ft_lstadd_front.c \
-		ft_lstsize.c  ft_lstlast.c \
-		ft_lstadd_back.c  ft_lstdelone.c \
-		ft_lstmap.c ft_lstiter.c \
-		ft_lstclear.c get_next_line.c \
-
-B_OBJS = ${SRC_B:.c=.o}
 
 OBJS = ${SRC:.c=.o}
 
@@ -43,11 +35,8 @@ HEADER = libft.h
 
 all:	${NAME}
 
-${NAME}: ${OBJS} ${B_OBJS} ${HEADER}
-	ar -rcs ${NAME} ${OBJS} ${B_OBJS} ${HEADER}
-
-# bonus: ${NAME} ${B_OBJS}
-# 	ar -rcs ${NAME} ${B_OBJS}
+${NAME}: ${OBJS} ${HEADER}
+	ar -rcs ${NAME} ${OBJS} ${HEADER}
 
 # Tell make how to transform a .c file into a object file
 .c.o:
@@ -61,8 +50,8 @@ fclean: clean
 
 re: fclean all
 
-so:
-	$(CC) -nostartfiles -fPIC $(FLAGS) $(SRC)
-	gcc -nostartfiles -shared -o libft.so $(OBJS)
+# so:
+# 	$(CC) -nostartfiles -fPIC $(FLAGS) $(SRC)
+# 	gcc -nostartfiles -shared -o libft.so $(OBJS)
 
 .PHONY: clean all fclean re so
