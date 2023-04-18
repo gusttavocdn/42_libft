@@ -439,4 +439,12 @@ int					ft_print_hex_nbr(unsigned int number, char type);
  */
 int					ft_put_unsigned_fd(int n, int fd);
 
+/**
+ * @brief Sorts a array of numbers in ascending order using mergesort algo.
+ * @param start The starting index of the array. In the first call usualy O.
+ * @param end The ending index of the array. In the first call usualy the size.
+ * @param array The array to be sorted.
+*/
+void				ft_msort_n(int start, int end, int array[end]);
+
 #endif
