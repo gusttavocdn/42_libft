@@ -6,7 +6,7 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 23:48:40 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/06/14 01:46:49 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/06/14 01:53:04 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -211,7 +211,6 @@ char				*ft_substr(char const *s, unsigned int start, size_t len);
 /**
  * @brief This functions allocates and returns a new string
  * which is the concatenation of s1 and s2
- *
  * @return Returns the new string or NULL if fails
  */
 char				*ft_strjoin(char const *s1, char const *s2);
