@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/06/13 23:48:40 by gusda-si          #+#    #+#             */
+/*   Updated: 2023/06/14 00:04:46 by gusda-si         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LIBFT_H
 # define LIBFT_H
 
@@ -7,6 +19,9 @@
 
 # define BUFFER_SIZE 42
 
+# define TRUE 1
+# define FALSE 0
+
 typedef struct s_list
 {
 	void			*content;
@@ -14,43 +29,13 @@ typedef struct s_list
 }					t_list;
 
 // Functions from <type.h> library
-/**
- * @brief This functions verify if a char is character from a-Z
- */
+
 int					ft_isalpha(int c);
-
-/**
- * @brief This functions verify if a char is a digit from 0-9
- */
 int					ft_isdigit(int c);
-
-/**
- * @brief This functions verify if a char is alphanumeric
- */
 int					ft_isalnum(int c);
-
-/**
- * @brief This functions verify if a char is ascii
- */
 int					ft_isascii(int c);
-
-/**
- * @brief This functions verify if a char is printable
- */
 int					ft_isprint(int c);
-
-/**
- * @brief This functions converts a lower case character
- * to upper case
- * @param c character to be convert
- */
 int					ft_toupper(int c);
-
-/**
- * @brief This functions converts a upper case character
- * to lower case
- * @param c character to be convert
- */
 int					ft_tolower(int c);
 
 // BSD library functions

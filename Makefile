@@ -29,8 +29,7 @@ SRC = ft_isalpha.c ft_isdigit.c \
 OBJS = ${SRC:.c=.o}
 
 CC = cc
-
-FLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 
 HEADER = libft.h
 
@@ -41,10 +40,10 @@ ${NAME}: ${OBJS} ${HEADER}
 
 # Tell make how to transform a .c file into a object file
 .c.o:
-	$(CC) $(FLAGS) -c $< -o ${<:.c=.o}
+	$(CC) $(CFLAGS) -c $< -o ${<:.c=.o}
 
 clean:
-	${RM} ${OBJS} libft.so a.out
+	${RM} ${OBJS} libft.so *.out
 
 fclean: clean
 	${RM} ${NAME}
