@@ -6,7 +6,7 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 23:48:40 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/06/14 00:04:46 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/06/14 01:46:49 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,15 @@ int					ft_tolower(int c);
 
 // BSD library functions
 
+/**
+ * @brief Concatenate two strings and return the size of the result.
+ * The concatenation is always null terminated.
+ * @param dst The buffer where the final concatenation will be stored
+ * @param src The string to concatenate
+ * @param size The size of the buffer.
+ * @return The size buffer has to be to store the concatenation,
+*	without count the NULL terminator
+*/
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
 
 /**
@@ -49,7 +58,7 @@ size_t				ft_strlcat(char *dst, const char *src, size_t size);
  * @param src The source string that will be copied
  * @param size The size of the source string without the '\0'
  * @return Return the length of the string that is tried to be copied.
- * Dont count the NULL terminator.
+ * Don't count the NULL terminator.
  */
 size_t				ft_strlcpy(char *dst, const char *src, size_t size);
 
@@ -60,7 +69,7 @@ size_t				ft_strlcpy(char *dst, const char *src, size_t size);
  * @param little The string to search for in the big
  * @param len The n bytes where to searching for the substring
  * @return Returns a pointer to the start of the substring at the string.
- * Returns NULL if the substring is not found. Returns the original string if
+ * @return NULL if the substring is not found. Returns the original string if
  * we pass an empty substring
  */
 char				*ft_strnstr(const char *big, const char *little,
@@ -69,7 +78,8 @@ char				*ft_strnstr(const char *big, const char *little,
 // Function from <string.h> library
 
 /**
- * @brief Return the length of a string. Dont' count the '\0' (null character).
+ * @brief Calculate the length of a string.
+ * @return The length of the string. Don't count the null terminator.
  */
 size_t				ft_strlen(const char *s);
 
@@ -79,22 +89,21 @@ size_t				ft_strlen(const char *s);
  * @param s The string to search
  * @param c The char to search for in the string
  * @return Returns a pointer to the character if found.
- *  Returns NULL if not found.
- * If c == '\0' returns a pointer to the end of the string.
+ * @return Returns NULL if not found.
+ * @return If c == '\0' returns a pointer to the end of the string.
  */
 char				*ft_strchr(const char *str, int c);
 
 /**
-
-	* @brief This functions founds the last occurrence of an c character in a string.
- *
- * @param s The string to search
- * @param c The character to search for in the string
- * @return Returns a pointer to the last occurrence
- * of the character if found.
- *  Returns NULL if not found.
- * If c == '\0' returns a pointer to the end of the string.
- */
+* @brief This functions founds the last occurrence of an c character in a string.
+*
+* @param s The string to search
+* @param c The character to search for in the string
+* @return Returns a pointer to the last occurrence
+* of the character if found.
+*  Returns NULL if not found.
+* If c == '\0' returns a pointer to the end of the string.
+*/
 char				*ft_strrchr(const char *str, int c);
 
 /**
@@ -117,7 +126,7 @@ void				*ft_memset(void *s, int c, size_t n);
 
 /**
  * @brief This erases in some memory area. Them are to be
- * deleted is passed as n bytes
+ * deleted is passed as n bytes. The area will be filled with NULL (0)
  * @param s The area to be erased
  * @param n The number of bytes to be erased
  */
