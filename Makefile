@@ -1,27 +1,15 @@
 NAME = libft.a
-
 SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c \
-	ft_isascii.c ft_isprint.c \
-
+	ft_isascii.c ft_isprint.c ft_strlen.c \
+	ft_memset.c \
 OBJS = ${SRC:.c=.o}
-
 CC = cc
-# -g flag to debug remember to remove
 CFLAGS = -Wall -Wextra -Werror
-
 HEADER = libft.h
-
 MAIN = main
+TEST_FOLDER = tests
 
 all:	${NAME}
-
-debug: ${NAME} ${MAIN}.c
-	${CC} ${CFLAGS} -g ${MAIN}.c ${NAME} -o ${MAIN}
-	${RM} ${OBJS}
-	clear
-
-run: debug ${MAIN}
-	@./${MAIN}
 
 ${NAME}: ${OBJS} ${HEADER}
 	ar -rcs ${NAME} ${OBJS} ${HEADER}
@@ -38,8 +26,12 @@ fclean: clean
 
 re: fclean all
 
+test: ${TEST_FOLDER}
+	cd ${TEST_FOLDER}
+	make
+
 # so:
 # 	$(CC) -nostartfiles -fPIC $(FLAGS) $(SRC)
 # 	gcc -nostartfiles -shared -o libft.so $(OBJS)
 
-.PHONY: clean all fclean re so debug run
+.PHONY: clean all fclean re so test

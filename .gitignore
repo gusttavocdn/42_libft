@@ -56,11 +56,11 @@ Module.symvers
 Mkfile.old
 dkms.conf
 main
-main.c
+tests/tests.c
 libft.a
 *.o
 .idea
 .vscode
-.normignore
+tests/.normignore
 
 # End of https://www.toptal.com/developers/gitignore/api/c
