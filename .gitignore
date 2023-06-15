@@ -61,5 +61,6 @@ libft.a
 *.o
 .idea
 .vscode
+.normignore
 
 # End of https://www.toptal.com/developers/gitignore/api/c

@@ -5,20 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/13 23:58:23 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/06/13 23:59:26 by gusda-si         ###   ########.fr       */
+/*   Created: 2023/06/14 22:17:47 by gusda-si          #+#    #+#             */
+/*   Updated: 2023/06/14 22:19:25 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/**
- * @brief This functions verify if a char is alphanumeric
- * @return Returns 1 if a char is alphanumeric or 0 otherwise
- */
 int	ft_isalnum(int c)
 {
-	if (ft_isalpha(c) || ft_isdigit(c))
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+		return (TRUE);
+	if (c >= '0' && c <= '9')
 		return (TRUE);
 	return (FALSE);
 }
