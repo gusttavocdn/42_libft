@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen_test.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/06/15 10:40:37 by gusda-si          #+#    #+#             */
+/*   Updated: 2023/06/15 10:41:05 by gusda-si         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../libft.h"
 #include <stdio.h>
 #include <string.h>
 
-void ft_strlen_tester_helper(t_string word);
+void	ft_strlen_tester_helper(t_string word);
 
-void ft_strlen_tester(void)
+void	ft_strlen_tester(void)
 {
 	printf("\n \e[1;36m -------FT_STRLEN TESTS-------\e[0m\n\n");
 	ft_strlen_tester_helper("Sasuke");
@@ -16,15 +28,15 @@ void ft_strlen_tester(void)
 	ft_strlen_tester_helper("Hey its me Mário");
 }
 
-void ft_strlen_tester_helper(t_string word)
+void	ft_strlen_tester_helper(t_string word)
 {
-	size_t original;
-	size_t fake;
+	size_t	original;
+	size_t	fake;
 
 	original = strlen(word);
 	fake = ft_strlen(word);
 	printf("Input: %s || Original Result: %zu || Fake Result: %zu ", word,
-	       original, fake);
+			original, fake);
 	printf("Match: %s\n ",
-	       original == fake ? "\e[0;32mYes\e[0m" : "\e[4;31m Error\e[0m");
+			original == fake ? "\e[0;32mYes\e[0m" : "\e[4;31m Error\e[0m");
 }

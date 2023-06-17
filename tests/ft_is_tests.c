@@ -1,13 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_is_tests.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/06/15 10:39:48 by gusda-si          #+#    #+#             */
+/*   Updated: 2023/06/15 10:40:29 by gusda-si         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../libft.h"
-#include <stdio.h>
-#include <stdbool.h>
 #include <ctype.h>
+#include <stdbool.h>
+#include <stdio.h>
 
+void	ft_is_test_helper(t_string name, int(fake_func)(int),
+			int(original_func)(int));
 
-void ft_is_test_helper(t_string name, int (fake_func)(int),
-                       int (original_func)(int));
-
-void ft_is_tester(void)
+void	ft_is_tester(void)
 {
 	ft_is_test_helper("ISALPHA", ft_isalpha, isalpha);
 	ft_is_test_helper("ISDIGIT", ft_isdigit, isdigit);
@@ -16,15 +27,13 @@ void ft_is_tester(void)
 	ft_is_test_helper("ISALNUM", ft_isalnum, isalnum);
 }
 
-
-void
-ft_is_test_helper(t_string name, int (fake_func)(int), int (original_func)
-		(int))
+void	ft_is_test_helper(t_string name, int(fake_func)(int),
+		int(original_func)(int))
 {
-	bool original;
-	bool fake;
-	unsigned char i;
-	unsigned char max_ascii_extended_value;
+	bool			original;
+	bool			fake;
+	unsigned char	i;
+	unsigned char	max_ascii_extended_value;
 
 	max_ascii_extended_value = 255;
 	i = 0;
@@ -34,9 +43,9 @@ ft_is_test_helper(t_string name, int (fake_func)(int), int (original_func)
 		original = original_func(i);
 		fake = fake_func(i);
 		printf("Input: %c || Original Result: %d || Fake Result: %d ", i,
-		       original, fake);
+				original, fake);
 		printf("Match: %s\n ",
-		       original == fake ? "\e[0;32mYes\e[0m " : "\e[4;31m Error\e[0m ");
+				original == fake ? "\e[0;32mYes\e[0m " : "\e[4;31m Error\e[0m ");
 		i++;
 	}
 }

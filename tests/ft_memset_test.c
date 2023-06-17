@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset_test.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/06/15 10:40:31 by gusda-si          #+#    #+#             */
+/*   Updated: 2023/06/15 10:40:32 by gusda-si         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../libft.h"
-#include <string.h>
 #include <stdio.h>
+#include <string.h>
 
-void ft_memset_test_helper(char c, size_t bytes);
+void	ft_memset_test_helper(char c, size_t bytes);
 
-void ft_memset_tester(void)
+void	ft_memset_tester(void)
 {
 	printf("\n\e[1;36m -------FT_MEMSET TESTS-------\e[0m\n");
 	ft_memset_test_helper('d', 9);
@@ -13,10 +25,10 @@ void ft_memset_tester(void)
 	ft_memset_test_helper('b', 3);
 }
 
-void ft_memset_test_helper(char c, size_t bytes)
+void	ft_memset_test_helper(char c, size_t bytes)
 {
-	char ft_memset_ptr[10];
-	char memset_ptr[10];
+	char	ft_memset_ptr[10];
+	char	memset_ptr[10];
 
 	ft_memset(ft_memset_ptr, c, bytes);
 	memset(memset_ptr, c, bytes);
