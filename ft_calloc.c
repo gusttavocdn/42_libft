@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/18 01:33:10 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/06/18 12:58:34 by gusda-si         ###   ########.fr       */
+/*   Created: 2023/06/18 12:17:38 by gusda-si          #+#    #+#             */
+/*   Updated: 2023/06/18 12:47:57 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *str, int c, size_t n)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	unsigned char	*s;
+	void	*pointer;
 
-	s = (unsigned char *)str;
-	while (*s != '\0' && n--)
-	{
-		if (*s == (unsigned char)c)
-			return ((void *)s);
-		s++;
-	}
-	return (NULL);
+	if (nmemb * size >= ULONG_MAX)
+		return (NULL);
+	pointer = malloc(nmemb * size);
+	if (pointer == NULL)
+		return (NULL);
+	ft_bzero(pointer, nmemb * size);
+	return (pointer);
 }

@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/18 01:33:10 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/06/18 12:58:34 by gusda-si         ###   ########.fr       */
+/*   Created: 2023/06/18 12:48:43 by gusda-si          #+#    #+#             */
+/*   Updated: 2023/06/18 12:58:57 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *str, int c, size_t n)
+char	*ft_strdup(const char *s)
 {
-	unsigned char	*s;
+	char *new_str;
+	size_t size;
 
-	s = (unsigned char *)str;
-	while (*s != '\0' && n--)
-	{
-		if (*s == (unsigned char)c)
-			return ((void *)s);
-		s++;
-	}
-	return (NULL);
+	size = ft_strlen(s);
+	new_str = (char *)ft_calloc(size + NULL_BYTE, sizeof(char));
+	while (*s != '\0')
+		*new_str++ = *s++;
+	*new_str = '\0';
+	return ((new_str - size));
 }

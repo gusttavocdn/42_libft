@@ -6,7 +6,7 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 23:48:40 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/06/18 01:33:41 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/06/18 12:50:57 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,18 @@
 # define LIBFT_H
 
 // Auxiliar Libraries
+
+# include <stdlib.h>
 # include <unistd.h>
+
+// Constants
 
 # define TRUE 1
 # define FALSE 0
+# define INT_MAX 2147483647
+# define INT_MIN -2147483648
+# define ULONG_MAX 18446744073709551615UL
+# define NULL_BYTE 1
 
 // Types
 
@@ -220,7 +228,7 @@ char					*ft_strdup(const char *s);
 
 /**
  * @brief This functions allocate an amount of memory and initialize
- * with 0 to use
+ * with 0.
  * @param nmemb The quantity of elements to allocate
  * @param size The size of each individual element
  * @return Returns a pointer to the allocated memory.
@@ -229,7 +237,8 @@ char					*ft_strdup(const char *s);
 void					*ft_calloc(size_t nmemb, size_t size);
 
 /**
- * @brief This function converts a string in a number
+ * @brief This function converts a string in a number that
+ * can be stored in a int variable.
  */
 int						ft_atoi(const char *s);
 
