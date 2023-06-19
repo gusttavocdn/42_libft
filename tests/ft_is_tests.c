@@ -6,14 +6,11 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/15 10:39:48 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/06/15 10:40:29 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/06/18 13:23:11 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
-#include <ctype.h>
-#include <stdbool.h>
-#include <stdio.h>
+#include "libft_tests.h"
 
 void	ft_is_test_helper(t_string name, int(fake_func)(int),
 			int(original_func)(int));

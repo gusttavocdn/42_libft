@@ -6,15 +6,13 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/15 10:40:31 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/06/15 10:40:32 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/06/18 13:21:25 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
-#include <stdio.h>
-#include <string.h>
+#include "libft_tests.h"
 
-void	ft_memset_test_helper(char c, size_t bytes);
+static void	ft_memset_test_helper(char c, size_t bytes);
 
 void	ft_memset_tester(void)
 {
@@ -25,7 +23,7 @@ void	ft_memset_tester(void)
 	ft_memset_test_helper('b', 3);
 }
 
-void	ft_memset_test_helper(char c, size_t bytes)
+static void	ft_memset_test_helper(char c, size_t bytes)
 {
 	char	ft_memset_ptr[10];
 	char	memset_ptr[10];

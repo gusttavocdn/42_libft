@@ -6,7 +6,7 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 00:22:37 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/06/18 12:58:31 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/06/18 20:38:23 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,13 @@ char	*ft_strrchr(const char *str, int c)
 
 	str_len = ft_strlen(str);
 	s = (char *)str + str_len;
-	while (0 <= str_len)
+	while (str_len--)
 	{
 		if (*s == (unsigned char)c)
 			return (s);
-		str_len--;
 		s--;
 	}
+	if (*s == (unsigned char)c)
+		return (s);
 	return (NULL);
 }

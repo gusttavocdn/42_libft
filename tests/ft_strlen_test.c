@@ -6,15 +6,13 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/15 10:40:37 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/06/15 10:41:05 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/06/18 14:44:26 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
-#include <stdio.h>
-#include <string.h>
+#include "libft_tests.h"
 
-void	ft_strlen_tester_helper(t_string word);
+static void	ft_strlen_tester_helper(t_string word);
 
 void	ft_strlen_tester(void)
 {
@@ -28,7 +26,7 @@ void	ft_strlen_tester(void)
 	ft_strlen_tester_helper("Hey its me Mário");
 }
 
-void	ft_strlen_tester_helper(t_string word)
+static void	ft_strlen_tester_helper(t_string word)
 {
 	size_t	original;
 	size_t	fake;

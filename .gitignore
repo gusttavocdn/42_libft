@@ -62,5 +62,6 @@ libft.a
 .idea
 .vscode
 tests/.normignore
+libftTester
 
 # End of https://www.toptal.com/developers/gitignore/api/c

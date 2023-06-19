@@ -6,7 +6,7 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 01:44:08 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/06/18 02:14:58 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/06/18 20:29:15 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,9 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	i;
 	size_t	l_size;
 
-	if (!big || len == 0)
+	if (!big && len == 0)
 		return (NULL);
+	i = 0;
 	l_size = ft_strlen(little);
 	if (!l_size)
 		return ((char *)big);
