@@ -6,7 +6,7 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 02:14:18 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/06/18 02:22:39 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/06/20 22:30:03 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_atoi(const char *str)
 	while (ft_isspace(*str))
 		str++;
 	signal = 1;
-	while (*str == '+' || *str == '-')
+	if (*str == '+' || *str == '-')
 	{
 		if (*str == '-')
 			signal *= -1;
@@ -42,6 +42,6 @@ static int	ft_isspace(int c)
 {
 	if (c == ' ' || c == '\t' || c == '\n' || c == '\r' || c == '\f'
 		|| c == '\v')
-		return (1);
-	return (0);
+		return (TRUE);
+	return (FALSE);
 }

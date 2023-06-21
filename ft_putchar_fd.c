@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tests.c                                            :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/14 19:15:29 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/06/20 22:07:02 by gusda-si         ###   ########.fr       */
+/*   Created: 2023/06/20 18:14:42 by gusda-si          #+#    #+#             */
+/*   Updated: 2023/06/20 21:47:52 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_tests.h"
+#include "libft.h"
 
-int	main(void)
+void	ft_putchar_fd(char c, int fd)
 {
-	//	ft_is_tester();
-	//	ft_memset_tester();
-	//	ft_strlen_tester();
-	// ft_substr_tester();
-	// ft_strtrim("   xxxtripouille   xxx", " x");
-	ft_itoa(0);
-	return (0);
+	write(fd, &c, 1);
 }

@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tests.c                                            :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/14 19:15:29 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/06/20 22:07:02 by gusda-si         ###   ########.fr       */
+/*   Created: 2023/06/20 22:00:25 by gusda-si          #+#    #+#             */
+/*   Updated: 2023/06/20 22:07:04 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_tests.h"
+#include "libft.h"
 
-int	main(void)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	//	ft_is_tester();
-	//	ft_memset_tester();
-	//	ft_strlen_tester();
-	// ft_substr_tester();
-	// ft_strtrim("   xxxtripouille   xxx", " x");
-	ft_itoa(0);
-	return (0);
+	size_t	i;
+	char	*new_str;
+
+	if (!s || !f)
+		return (NULL);
+	new_str = ft_calloc(ft_strlen(s) + NULL_BYTE, sizeof(char));
+	if (!new_str)
+		return (NULL);
+	i = 0;
+	while (s[i] != '\0')
+	{
+		new_str[i] = f(i, s[i]);
+		i++;
+	}
+	return (new_str);
 }

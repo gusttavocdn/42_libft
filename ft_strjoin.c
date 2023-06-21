@@ -1,24 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tests.c                                            :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/14 19:15:29 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/06/20 22:07:02 by gusda-si         ###   ########.fr       */
+/*   Created: 2023/06/18 22:42:17 by gusda-si          #+#    #+#             */
+/*   Updated: 2023/06/18 23:07:14 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_tests.h"
+#include "libft.h"
 
-int	main(void)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	//	ft_is_tester();
-	//	ft_memset_tester();
-	//	ft_strlen_tester();
-	// ft_substr_tester();
-	// ft_strtrim("   xxxtripouille   xxx", " x");
-	ft_itoa(0);
-	return (0);
+	char	*new_str;
+	size_t	len;
+
+	if (!s1 || !s2)
+		return (NULL);
+	len = ft_strlen(s1) + ft_strlen(s2);
+	new_str = (char *)ft_calloc(len + NULL_BYTE, sizeof(char));
+	while (*s1 != '\0')
+		*new_str++ = *s1++;
+	while (*s2 != '\0')
+		*new_str++ = *s2++;
+	*new_str = '\0';
+	return ((new_str - len));
 }

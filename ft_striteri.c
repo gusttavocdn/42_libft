@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tests.c                                            :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/14 19:15:29 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/06/20 22:07:02 by gusda-si         ###   ########.fr       */
+/*   Created: 2023/06/20 21:56:49 by gusda-si          #+#    #+#             */
+/*   Updated: 2023/06/20 22:00:03 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_tests.h"
+#include "libft.h"
 
-int	main(void)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	//	ft_is_tester();
-	//	ft_memset_tester();
-	//	ft_strlen_tester();
-	// ft_substr_tester();
-	// ft_strtrim("   xxxtripouille   xxx", " x");
-	ft_itoa(0);
-	return (0);
+	size_t	i;
+
+	if (!s || !f)
+		return ;
+	i = 0;
+	while (s[i])
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
