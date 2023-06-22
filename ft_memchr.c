@@ -6,7 +6,7 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 01:33:10 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/06/18 12:58:34 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/06/22 13:40:59 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memchr(const void *str, int c, size_t n)
 	unsigned char	*s;
 
 	s = (unsigned char *)str;
-	while (*s != '\0' && n--)
+	while (n--)
 	{
 		if (*s == (unsigned char)c)
 			return ((void *)s);
