@@ -17,105 +17,128 @@ aumentando suas funcionalidades.
 
 ## Funções da biblioteca <ctype.h>
 
-- <strong>ft_isalpha</strong> - Verifica se determinado caractere é alfabético.
+- <strong>[`ft_isalpha`](ft_atoi.c)</strong> - Verifica se determinado caractere é alfabético.
 
-- <strong>ft_isdigit</strong> - checa se é um digito (0 a 9).
+- <strong>[`ft_isdigit`](ft_isdigit.c)</strong> - checa se é um digito (0 a 9).
 
-- <strong>ft_isalnum</strong> - checa se é um caractere alfanumérico.
+- <strong>[`ft_isalnum`](ft_isalnum.c)</strong> - checa se é um caractere alfanumérico.
 
-- <strong>ft_isascii</strong> - checa se é um caractere que faz parte da tabela ASCII tradicional.
+- <strong>[`ft_isascii`](ft_isascii.c)</strong> - checa se é um caractere que faz parte da tabela ASCII tradicional.
 
-- <strong>ft_isprint</strong> - checa se é um caractere printável.
+- <strong>[`ft_isprint`](ft_isprint.c)</strong> - checa se é um caractere printável.
 
-- <strong>ft_toupper</strong> - converte o caractere para maiúsculo.
+- <strong>[`ft_tolower`](ft_tolower.c)</strong> - converte o caractere para maiúsculo.
 
-- <strong>ft_tolower</strong> - converte o caractere para minúsculo.
+- <strong>[`ft_toupper`](ft_toupper.c)</strong> - converte o caractere para minúsculo.
 
 ## Funções da biblioteca <string.h>
 
-- **ft_memset** - Enche o bloco de memória com um mesmo byte.
+- **[`ft_memset`](ft_memset.c)** - Enche o bloco de memória com um mesmo byte.
 
-- **ft_strlen** - Calcula o tamanho de uma string.
+- **[`ft_strlen`](ft_strlen.c)** - Calcula o tamanho de uma string.
 
-- **ft_bzero** - Preenche uma string com zero.
+- **[`ft_bzero`](ft_bzero.c)** - Preenche uma string com zero.
 
-- **ft_memcpy** - Copia uma área de memória.
+- **[`ft_memcpy`](ft_memcpy.c)** - Copia uma área de memória.
 
-- **ft_memmove** - Copia uma área de memória.
+- **[`ft_memmove`](ft_memmove.c)** - Copia uma área de memória.
 
--**ft_strlcpy** - Copia uma string para um tamanho especificado.
+- **[`ft_strlcpy`](ft_strlcpy.c)** - Copia uma string para um tamanho especificado.
 
-- **ft_strlcat** - Concatena uma string para um um tamanho especificado.
+- **[`ft_strlcat`](ft_strlcat.c)** - Concatena uma string para um um tamanho especificado.
 
-- **ft_strchr** - Localiza a primeira ocorrência de um caractere em uma string.
+- **[`ft_strchr`](ft_strchr.c)** - Localiza a primeira ocorrência de um caractere em uma string.
 
-- **ft_strrch**r - Localiza a última ocorrência de um caractere em uma string.
+- **[`ft_strrchr`](ft_strrchr.c)** - Localiza a última ocorrência de um caractere em uma string.
 
-- **ft_strncmp**- Compara duas strings.
+- **[`ft_strnrcmp`](ft_strncmp.c)**- Compara duas strings.
 
-- **ft_memchr** - Checa um bloco de memória em busca de um caractere.
+- **[`ft_memchr`](ft_memchr.c)** - Checa um bloco de memória em busca de um caractere.
 
-- **ft_memcmp** - Compara blocos de memória.
+- **[`ft_memcmp`](ft_memcmp.c)** - Compara blocos de memória.
 
-- **ft_strnstr** - Cocaliza uma substring dentro de uma string.
+- **[`ft_strnstr`](ft_strnstr.c)** - Localiza uma substring em uma string.
 
-- **ft_strdup** - Cria uma duplicata da string passada como parâmetro.
+- **[`ft_strdup`](ft_strdup.c)** - Cria uma duplicata da string passada como parâmetro.
 
 ## Funções da biblioteca <stdlib.h>
 
-- **ft_atoi** - Converte uma string para um inteiro.
+- **[`ft_atoi`](ft_atoi.c)** - Converte uma string para um inteiro.
 
-- **ft_calloc** - Alloca memória e seta o valor de todos os bytes para 0.
+- **[`ft_calloc`](ft_calloc.c)** - Alloca memória e seta o valor de todos os bytes para 0.
 
 ## Funções exclusivas do projeto
 
-- **ft_substr** - Retorna uma substring de uma string.
+- **[`ft_substr`](ft_substr.c)** - Retorna uma substring de uma string.
 
-- **ft_strjoin** - Retorna uma string que é a junção das duas strings passadas como parâmetro.
+- **[`ft_strjoin`](ft_strjoin.c)** - Retorna uma string que é a junção das duas strings passadas como parâmetro.
 
-- **ft_strtrim** - Corta o início e fim de uma string quando achada a sequência de caracteres passada.
+- **[`ft_strtrim`](ft_strtrim.c)** - Corta o início e fim de uma string quando achada a sequência de caracteres
+  passada.
 
-- **ft_split** -Separa uma string em várias substrings delimitadas por um caractere.
+- **[`ft_split`](ft_split.c)** -Separa uma string em várias substrings delimitadas por um caractere.
 
-- **ft_itoa** - Converte um número em string.
+- **[`ft_itoa`](ft_itoa.c)** - Converte um número em string.
 
-- **ft_strmapi** - aplica uma função em uma string e retorna uma nova string modifica.
+- **[`ft_strmapi`](ft_strmapi.c)** - aplica uma função em uma string e retorna uma nova string modifica.
 
-- **ft_striteri** - Aplica uma função em cada char de uma string.
+- **[`ft_striteri`](ft_striteri.c)** - Aplica uma função em cada char de uma string.
 
-- **ft_putchar_fd** - Escreve um caractere em um fd
+- **[`ft_putchar_fd`](ft_putchar_fd.c)** - Escreve um caractere em um fd
 
-- **ft_putstr_fd** - Escreve uma string em um fd.
+- **[`ft_putstr_fd`](ft_putstr_fd.c)** - Escreve uma string em um fd.
 
-- **ft_putendl_fd** - Escreve uma string seguida por uma quebra de linha em um fd.
+- **[`ft_putendl_fd`](ft_putendl_fd.c)** - Escreve uma string seguida por uma quebra de linha em um fd.
 
-- **ft_putnbr_fd** - Escreve um número em um file descriptor.
+- **[`ft_putnbr_fd`](ft_putnbr_fd.c)** - Escreve um número em um file descriptor.
 
-## Funções para manusear Linked Lists
+[//]: # (## Funções para manusear Linked Lists)
 
-- **ft_lstnew** - Cria um novo elemento para uma lista.
+[//]: # ()
 
-- **ft_lstadd_front** - Adiciona um elemento no início de uma lista.
+[//]: # (- **ft_lstnew** - Cria um novo elemento para uma lista.)
 
-- **ft_lstsize** - Conta o número de elementos em uma lista.
+[//]: # ()
 
-- **ft_lstlast** - Retorna o último elemento de uma lista.
+[//]: # (- **ft_lstadd_front** - Adiciona um elemento no início de uma lista.)
 
-- **ft_lstadd_back** - Adiciona um elemento ao fim de uma lista.
+[//]: # ()
 
-- **ft_lstclear** - Deleta e da free em uma lista.
+[//]: # (- **ft_lstsize** - Conta o número de elementos em uma lista.)
 
-- **ft_lstiter** - Aplica uma função a cada elemento de uma lista.
+[//]: # ()
 
-- **ft_lstmap** - Aplica uma função a cada elemento de uma lista e retorna uma uma nova lista com as aplicações.
+[//]: # (- **ft_lstlast** - Retorna o último elemento de uma lista.)
 
-## Funções Extras
+[//]: # ()
 
-- **get_next_line** - Função que le um arquivo uma linha por vez.
-- **ft_ftprintf** - Função que exibe uma string formatada na tela.
-- **ft_put_unsigned_fd** - Exibe um unsigned int em um fd.
-- **ft_print_hex_nbr** - Exibe um numero em hexadecimal no stdout.
-- **ft_print_hex_memory** - Exibe um ponto de memoria em hexadecimal na tela.
+[//]: # (- **ft_lstadd_back** - Adiciona um elemento ao fim de uma lista.)
+
+[//]: # ()
+
+[//]: # (- **ft_lstclear** - Deleta e da free em uma lista.)
+
+[//]: # ()
+
+[//]: # (- **ft_lstiter** - Aplica uma função a cada elemento de uma lista.)
+
+[//]: # ()
+
+[//]: # (- **ft_lstmap** - Aplica uma função a cada elemento de uma lista e retorna uma uma nova lista com as aplicações.)
+
+[//]: # (## Funções Extras)
+
+[//]: # ()
+
+[//]: # (- **get_next_line** - Função que le um arquivo uma linha por vez.)
+
+[//]: # (- **ft_ftprintf** - Função que exibe uma string formatada na tela.)
+
+[//]: # (- **ft_put_unsigned_fd** - Exibe um unsigned int em um fd.)
+
+[//]: # (- **ft_print_hex_nbr** - Exibe um numero em hexadecimal no stdout.)
+
+[//]: # (- **ft_print_hex_memory** - Exibe um ponto de memoria em hexadecimal na tela.)
 
 <h2 align="center"><strong>Principais Conceitos Aprendidos</strong></h2>
 
