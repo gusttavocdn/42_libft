@@ -17,19 +17,19 @@ aumentando suas funcionalidades.
 
 ## Funções da biblioteca <ctype.h>
 
-- <strong>[`ft_isalpha`](ft_atoi.c)</strong> - Verifica se determinado caractere é alfabético.
+- **[`ft_isalpha`](ft_atoi.c)** - Verifica se determinado caractere é alfabético.
 
-- <strong>[`ft_isdigit`](ft_isdigit.c)</strong> - checa se é um digito (0 a 9).
+- **[`ft_isdigit`](ft_isdigit.c)** - checa se é um digito (0 a 9).
 
-- <strong>[`ft_isalnum`](ft_isalnum.c)</strong> - checa se é um caractere alfanumérico.
+- **[`ft_isalnum`](ft_isalnum.c)** - checa se é um caractere alfanumérico.
 
-- <strong>[`ft_isascii`](ft_isascii.c)</strong> - checa se é um caractere que faz parte da tabela ASCII tradicional.
+- **[`ft_isascii`](ft_isascii.c)** - checa se é um caractere que faz parte da tabela ASCII tradicional.
 
-- <strong>[`ft_isprint`](ft_isprint.c)</strong> - checa se é um caractere printável.
+- **[`ft_isprint`](ft_isprint.c)** - checa se é um caractere printável.
 
-- <strong>[`ft_tolower`](ft_tolower.c)</strong> - converte o caractere para maiúsculo.
+- **[`ft_tolower`](ft_tolower.c)** - converte o caractere para maiúsculo.
 
-- <strong>[`ft_toupper`](ft_toupper.c)</strong> - converte o caractere para minúsculo.
+- **[`ft_toupper`](ft_toupper.c)** - converte o caractere para minúsculo.
 
 ## Funções da biblioteca <string.h>
 
