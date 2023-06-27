@@ -6,7 +6,7 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 23:48:40 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/06/22 13:37:51 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/06/27 16:48:43 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@
 // Types
 
 // My own type to represent strings
-typedef char			*t_string;
+// typedef char			*t_string;
 
 // My own type to represent a one byte value.
 typedef unsigned char	t_byte;

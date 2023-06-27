@@ -37,12 +37,8 @@ fclean: clean
 
 re: fclean all
 
-test: ${TEST_FOLDER}
-	cd ${TEST_FOLDER}
-	make
-
 # so:
 # 	$(CC) -nostartfiles -fPIC $(FLAGS) $(SRC)
 # 	gcc -nostartfiles -shared -o libft.so $(OBJS)
 
-.PHONY: clean all fclean re so test
+.PHONY: clean all fclean re
