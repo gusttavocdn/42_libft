@@ -6,7 +6,7 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 23:48:40 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/06/27 16:48:43 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/07/13 09:02:46 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,14 @@
 
 // Types
 
-// My own type to represent strings
-// typedef char			*t_string;
-
 // My own type to represent a one byte value.
 typedef unsigned char	t_byte;
+
+typedef struct s_list
+{
+	void				*content;
+	struct s_list		*next;
+}						t_list;
 
 // Functions from <type.h> library
 
@@ -360,7 +363,7 @@ char					**ft_split(char const *s, char c);
  * @param content The content to create the node with.
  * @return Thew new node
  */
-// t_list	*ft_lstnew(void *content);
+t_list					*ft_lstnew(void *content);
 
 /**
  * @brief Adds the node ’new’ at the beginning of the list.
@@ -369,7 +372,7 @@ char					**ft_split(char const *s, char c);
  * @param new The address of a pointer to the node to be
  * added to the list.
  */
-// void	ft_lstadd_front(t_list **lst, t_list *new);
+void					ft_lstadd_front(t_list **lst, t_list *new);
 
 /**
  * @brief Counts the number of nodes in a list.

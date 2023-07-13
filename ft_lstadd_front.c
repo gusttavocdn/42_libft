@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/14 22:35:05 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/07/12 21:41:19 by gusda-si         ###   ########.fr       */
+/*   Created: 2023/07/12 21:47:57 by gusda-si          #+#    #+#             */
+/*   Updated: 2023/07/13 09:02:40 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	char	*s_begin;
+	new->next = *lst;
+	*lst = new;
+}
 
-	s_begin = (char *)s;
-	while (*s != '\0')
-		s++;
-	return ((size_t)(s - s_begin));
+int	main(void)
+{
+	t_list	*l;
+	t_list	*b;
+
+	b = ft_lstnew((void *)"Gustavo");
+	ft_lstadd_front(&l, b);
+	return (0);
 }

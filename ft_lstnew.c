@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/14 22:35:05 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/07/12 21:41:19 by gusda-si         ###   ########.fr       */
+/*   Created: 2023/07/12 21:17:18 by gusda-si          #+#    #+#             */
+/*   Updated: 2023/07/13 09:02:41 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+t_list	*ft_lstnew(void *content)
 {
-	char	*s_begin;
+	t_list	*node;
 
-	s_begin = (char *)s;
-	while (*s != '\0')
-		s++;
-	return ((size_t)(s - s_begin));
+	node = (t_list *)ft_calloc(1, sizeof(t_list));
+	if (!node)
+		return (NULL);
+	node->content = content;
+	node->next = NULL;
+	return (node);
 }
