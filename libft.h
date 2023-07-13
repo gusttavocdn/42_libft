@@ -6,7 +6,7 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 23:48:40 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/07/13 09:02:46 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/07/13 18:10:16 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 // Auxiliar Libraries
 
+// # include <stdio.h>
+# include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
 
@@ -379,14 +381,14 @@ void					ft_lstadd_front(t_list **lst, t_list *new);
  * @param lst The beginning of the list.
  * @return The length of the list
  */
-// int		ft_lstsize(t_list *lst);
+int						ft_lstsize(t_list *lst);
 
 /**
  * @brief Returns the last node of the list.
  * @param lst The beginning of the list.
  * @return Last node of the list
  */
-// t_list	*ft_lstlast(t_list *lst);
+t_list					*ft_lstlast(t_list *lst);
 
 /**
  * @brief Adds the node ’new’ at the end of the list.
@@ -395,7 +397,7 @@ void					ft_lstadd_front(t_list **lst, t_list *new);
  * @param new The address of a pointer to the node to be
  * added to the list.
  */
-// void	ft_lstadd_back(t_list **lst, t_list *new);
+void					ft_lstadd_back(t_list **lst, t_list *new);
 
 /**
  *
