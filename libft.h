@@ -6,7 +6,7 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 23:48:40 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/07/13 18:10:16 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/07/13 18:54:06 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 // Auxiliar Libraries
 
-// # include <stdio.h>
 # include <stddef.h>
+// # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
 
@@ -405,7 +405,7 @@ void					ft_lstadd_back(t_list **lst, t_list *new);
  * @param del The address of the function used to delete
  * the content.
 //  */
-// void	ft_lstdelone(t_list *lst, void (*del)(void *));
+void					ft_lstdelone(t_list *lst, void (*del)(void *));
 
 /**
  *
