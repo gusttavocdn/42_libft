@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/13 18:56:12 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/07/14 11:31:55 by gusda-si         ###   ########.fr       */
+/*   Created: 2023/07/14 11:36:33 by gusda-si          #+#    #+#             */
+/*   Updated: 2023/07/14 12:35:03 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*current_node;
-	t_list	*next_node;
+	t_list	*new_lst;
+	t_list	*old_lst;
 
-	current_node = *lst;
-	next_node = current_node->next;
-	while (next_node)
+	(void)del;
+	old_lst = lst;
+	new_lst = ft_lstnew(f(old_lst->content));
+	old_lst = old_lst->next;
+	while (old_lst)
 	{
-		ft_lstdelone(current_node, del);
-		current_node = next_node;
-		next_node = next_node->next;
+		ft_lstadd_back(&new_lst, ft_lstnew(f(old_lst->content)));
+		old_lst = old_lst->next;
 	}
-	ft_lstdelone(current_node, del);
-	*lst = NULL;
+	return (new_lst);
 }

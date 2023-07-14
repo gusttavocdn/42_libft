@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/13 18:56:12 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/07/14 11:31:55 by gusda-si         ###   ########.fr       */
+/*   Created: 2023/07/14 11:32:30 by gusda-si          #+#    #+#             */
+/*   Updated: 2023/07/14 11:36:24 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list	*current_node;
-	t_list	*next_node;
+	t_list	*node;
 
-	current_node = *lst;
-	next_node = current_node->next;
-	while (next_node)
+	node = lst;
+	while (node)
 	{
-		ft_lstdelone(current_node, del);
-		current_node = next_node;
-		next_node = next_node->next;
+		f(node->content);
+		node = node->next;
 	}
-	ft_lstdelone(current_node, del);
-	*lst = NULL;
 }

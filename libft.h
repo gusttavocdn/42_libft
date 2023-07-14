@@ -6,7 +6,7 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 23:48:40 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/07/13 18:54:06 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/07/14 11:36:46 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -409,11 +409,13 @@ void					ft_lstdelone(t_list *lst, void (*del)(void *));
 
 /**
  *
+ * @brief Deletes and frees the given node and every
+ * successor of that node, using the function 'del'
  * @param lst The address of a pointer to a node.
  * @param del The address of the function used to delete
  * the content of the node.
  */
-// void	ft_lstclear(t_list **lst, void (*del)(void *));
+void					ft_lstclear(t_list **lst, void (*del)(void *));
 
 /**
  *
@@ -421,7 +423,7 @@ void					ft_lstdelone(t_list *lst, void (*del)(void *));
  * @param f The address of the function used to iterate on
  * the list.
  */
-// void	ft_lstiter(t_list *lst, void (*f)(void *));
+void					ft_lstiter(t_list *lst, void (*f)(void *));
 
 /**
  * @brief Iterates the list ’lst’ and applies the function
@@ -437,7 +439,7 @@ void					ft_lstdelone(t_list *lst, void (*del)(void *));
  * @return The new list.
  * NULL if the allocation fails.
  */
-// t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void
-// *));
+t_list					*ft_lstmap(t_list *lst, void *(*f)(void *),
+							void (*del)(void *));
 
 #endif
