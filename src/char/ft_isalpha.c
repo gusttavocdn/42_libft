@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/13 17:53:01 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/07/13 18:22:03 by gusda-si         ###   ########.fr       */
+/*   Created: 2023/06/14 19:14:29 by gusda-si          #+#    #+#             */
+/*   Updated: 2023/07/17 19:04:29 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../includes/libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+int	ft_isalpha(int c)
 {
-	t_list	*node;
-
-	if (!(*lst))
-		*lst = new;
-	else
-	{
-		node = *lst;
-		while (node->next)
-			node = node->next;
-		node->next = new;
-	}
+	if (c >= 'A' && c <= 'Z')
+		return (TRUE);
+	if (c >= 'a' && c <= 'z')
+		return (TRUE);
+	return (FALSE);
 }

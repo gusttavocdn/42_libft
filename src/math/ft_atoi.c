@@ -6,11 +6,11 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 02:14:18 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/06/21 20:19:47 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/07/17 18:59:04 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../includes/libft.h"
 
 static int	ft_isspace(int c);
 

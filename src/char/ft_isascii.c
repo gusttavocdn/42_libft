@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/20 21:40:14 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/07/12 21:13:38 by gusda-si         ###   ########.fr       */
+/*   Created: 2023/06/14 22:19:29 by gusda-si          #+#    #+#             */
+/*   Updated: 2023/07/17 19:04:28 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../includes/libft.h"
 
-void	ft_putendl_fd(char *s, int fd)
+int	ft_isascii(int c)
 {
-	size_t	str_len;
-
-	str_len = ft_strlen(s);
-	write(fd, s, str_len);
-	write(fd, "\n", 1);
+	if (c >= 0 && c <= 127)
+		return (TRUE);
+	return (FALSE);
 }

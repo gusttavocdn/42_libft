@@ -6,11 +6,11 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 22:17:47 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/06/23 16:35:07 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/07/17 19:04:30 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../includes/libft.h"
 
 int	ft_isalnum(int c)
 {

@@ -6,11 +6,11 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/17 01:02:35 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/06/17 23:52:49 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/07/17 19:14:29 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../includes/libft.h"
 
 // NOTES
 /* This functions works pretty similar to ft_memcpy.

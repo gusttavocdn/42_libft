@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/15 10:39:37 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/06/15 10:39:42 by gusda-si         ###   ########.fr       */
+/*   Created: 2023/06/18 00:07:01 by gusda-si          #+#    #+#             */
+/*   Updated: 2023/07/17 19:04:23 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../includes/libft.h"
 
-void	ft_bzero(void *s, size_t n)
+int	ft_toupper(int c)
 {
-	t_byte	*memory_addr;
-
-	memory_addr = (t_byte *)s;
-	while (n--)
-		*memory_addr++ = '\0';
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
 }

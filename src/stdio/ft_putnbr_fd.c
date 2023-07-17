@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/13 17:38:24 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/07/13 18:49:59 by gusda-si         ###   ########.fr       */
+/*   Created: 2023/06/20 21:42:49 by gusda-si          #+#    #+#             */
+/*   Updated: 2023/07/17 19:18:34 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../includes/ft_stdio.h"
 
-t_list	*ft_lstlast(t_list *lst)
+void	ft_putnbr_fd(int n, int fd)
 {
-	if (!lst)
-		return (NULL);
-	while (lst->next)
-		lst = lst->next;
-	return (lst);
+	long int	number;
+
+	number = n;
+	if (number < 0)
+	{
+		ft_putchar_fd('-', fd);
+		number *= -1;
+	}
+	if (number <= 9)
+		return (ft_putchar_fd((number % 10) + '0', fd));
+	ft_putnbr_fd(number / 10, fd);
+	ft_putchar_fd((number % 10) + '0', fd);
 }

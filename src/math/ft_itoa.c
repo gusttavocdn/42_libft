@@ -6,13 +6,13 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 17:36:32 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/06/20 18:14:19 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/07/17 18:59:48 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../includes/libft.h"
 
-static size_t	ft_count_digits(long int n);
+static size_t	count_digits(long int n);
 
 char	*ft_itoa(int n)
 {
@@ -22,7 +22,7 @@ char	*ft_itoa(int n)
 	size_t		i;
 
 	nb = n;
-	size = ft_count_digits(nb);
+	size = count_digits(nb);
 	number = (char *)ft_calloc(size + NULL_BYTE, sizeof(char));
 	if (!number)
 		return (NULL);
@@ -43,7 +43,7 @@ char	*ft_itoa(int n)
 	return (number);
 }
 
-static size_t	ft_count_digits(long int n)
+static size_t	count_digits(long int n)
 {
 	size_t	digits;
 

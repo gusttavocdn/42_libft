@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/15 10:38:51 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/07/12 21:12:49 by gusda-si         ###   ########.fr       */
+/*   Created: 2023/06/15 10:39:37 by gusda-si          #+#    #+#             */
+/*   Updated: 2023/07/17 19:14:54 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../includes/libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	t_byte			*dest_ptr;
-	const t_byte	*src_ptr;
+	t_byte	*memory_addr;
 
-	if (!dest && !src)
-		return (dest);
-	src_ptr = src;
-	dest_ptr = dest;
+	memory_addr = (t_byte *)s;
 	while (n--)
-		*dest_ptr++ = *src_ptr++;
-	return (dest);
+		*memory_addr++ = '\0';
 }
