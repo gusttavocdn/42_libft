@@ -6,7 +6,7 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 23:48:40 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/07/18 11:59:20 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/07/18 17:53:06 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 // Standard Library headers
+# include <stddef.h>
 # include <stdint.h>
 # include <stdlib.h>
 # include <unistd.h>
@@ -58,5 +59,12 @@ typedef int32_t		t_4byte_i;
 
 // Signed 8 bytes (64 bits)
 typedef int64_t		t_8byte_i;
+
+// Enum to representing boolean values
+typedef enum e_bool
+{
+	true = TRUE,
+	false = FALSE,
+}					t_bool;
 
 #endif

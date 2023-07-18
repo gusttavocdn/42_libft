@@ -30,7 +30,8 @@ INCLUDES   := $(addprefix ./includes/, ft_char.h ft_math.h ft_mem.h ft_strings.h
 CHAR_LIB_SRCS := $(addprefix $(CHAR_LIB)/, ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
 											ft_isprint.c ft_tolower.c ft_toupper.c ft_isspace.c)
 
-MATH_LIB_SRCS := $(addprefix $(MATH_LIB)/, ft_atoi.c ft_itoa.c)
+MATH_LIB_SRCS := $(addprefix $(MATH_LIB)/, ft_atoi.c ft_itoa.c ft_atoi_base.c ft_itoa_base.c \
+											ft_calc_nbr_digits.c ft_convert_base.c)
 
 MEM_LIB_SRCS := $(addprefix $(MEM_LIB)/, ft_bzero.c ft_calloc.c ft_memcpy.c ft_memchr.c \
 										ft_memcmp.c ft_memmove.c ft_memset.c ft_swap.c)

@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_calc_nbr_digits.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/14 22:35:05 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/07/18 17:15:22 by gusda-si         ###   ########.fr       */
+/*   Created: 2023/07/18 17:35:39 by gusda-si          #+#    #+#             */
+/*   Updated: 2023/07/18 17:50:34 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-size_t	ft_strlen(const char *s)
+int	ft_calc_nbr_digits(int number, int base_len)
 {
-	char	*s_begin;
+	int	digits;
 
-	s_begin = (char *)s;
-	while (*s != '\0')
-		s++;
-	return ((size_t)(s - s_begin));
+	digits = 1;
+	number /= base_len;
+	while (number)
+	{
+		digits++;
+		number /= base_len;
+	}
+	return (digits);
 }

@@ -6,7 +6,7 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 19:00:04 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/07/18 17:10:56 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/07/18 17:50:36 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,5 +55,6 @@ ssize_t	ft_putnbr_fd(long int n, int fd);
  * @brief Outputs the integer "nbr" to the given fd
  * using the given "base" as the base for the conversion.
 */
+
 ssize_t	ft_putnbr_base(long int nbr, char *base, int fd);
 #endif // FT_STDIO_H
