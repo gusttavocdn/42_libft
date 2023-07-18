@@ -6,11 +6,11 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 00:44:49 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/06/18 14:44:24 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/07/18 08:09:03 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../includes/libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

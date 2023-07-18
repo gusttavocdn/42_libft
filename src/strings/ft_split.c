@@ -6,16 +6,16 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 20:22:13 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/06/22 13:37:58 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/07/18 08:08:19 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../includes/libft.h"
 
-static size_t	ft_strlen_custom(const char *s, char c);
-static char		*ft_create_word(const char *s, char c);
-static size_t	ft_count_words(const char *s, char c);
-static size_t	ft_walk_through_delimiters(const char *s, char c);
+static size_t	strlen_custom(const char *s, char c);
+static char		*create_word(const char *s, char c);
+static size_t	count_words(const char *s, char c);
+static size_t	walk_through_delimiters(const char *s, char c);
 
 char	**ft_split(char const *s, char c)
 {
@@ -23,7 +23,7 @@ char	**ft_split(char const *s, char c)
 	char	**str_arr;
 	size_t	words_qnt;
 
-	words_qnt = ft_count_words(s, c);
+	words_qnt = count_words(s, c);
 	str_arr = (char **)ft_calloc(words_qnt + 1, sizeof(char *));
 	if (!str_arr)
 		return (NULL);
@@ -32,15 +32,15 @@ char	**ft_split(char const *s, char c)
 	current_word = 0;
 	while (current_word < words_qnt)
 	{
-		s += ft_walk_through_delimiters(s, c);
-		str_arr[current_word] = ft_create_word(s, c);
+		s += walk_through_delimiters(s, c);
+		str_arr[current_word] = create_word(s, c);
 		s += ft_strlen(str_arr[current_word]);
 		current_word++;
 	}
 	return (str_arr);
 }
 
-static size_t	ft_count_words(const char *s, char c)
+static size_t	count_words(const char *s, char c)
 {
 	size_t	counter;
 	int		is_new_word;
@@ -61,13 +61,13 @@ static size_t	ft_count_words(const char *s, char c)
 	return (counter);
 }
 
-static char	*ft_create_word(const char *s, char c)
+static char	*create_word(const char *s, char c)
 {
 	char	*new_str;
 	size_t	str_len;
 	size_t	i;
 
-	str_len = ft_strlen_custom(s, c);
+	str_len = strlen_custom(s, c);
 	new_str = (char *)ft_calloc(str_len + NULL_BYTE, sizeof(char));
 	i = 0;
 	while (i < str_len)
@@ -79,7 +79,7 @@ static char	*ft_create_word(const char *s, char c)
 	return (new_str);
 }
 
-static size_t	ft_strlen_custom(const char *s, char c)
+static size_t	strlen_custom(const char *s, char c)
 {
 	char	*str_begin;
 
@@ -91,7 +91,7 @@ static size_t	ft_strlen_custom(const char *s, char c)
 	return ((s - str_begin));
 }
 
-static size_t	ft_walk_through_delimiters(const char *s, char c)
+static size_t	walk_through_delimiters(const char *s, char c)
 {
 	size_t	walked_bytes;
 

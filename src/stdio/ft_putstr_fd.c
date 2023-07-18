@@ -6,16 +6,16 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 21:38:48 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/07/17 19:18:28 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/07/18 08:11:47 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/ft_stdio.h"
+#include "../../includes/libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+ssize_t	ft_putstr_fd(char *s, int fd)
 {
 	size_t	str_len;
 
 	str_len = ft_strlen(s);
-	write(fd, s, str_len);
+	return (write(fd, s, str_len));
 }

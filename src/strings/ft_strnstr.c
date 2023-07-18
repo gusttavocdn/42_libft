@@ -6,11 +6,11 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 01:44:08 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/06/18 20:29:15 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/07/18 08:09:11 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../includes/libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

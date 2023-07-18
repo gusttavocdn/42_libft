@@ -6,7 +6,7 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 19:00:04 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/07/17 19:17:59 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/07/18 08:28:20 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define FT_STDIO_H
 
 // Standard Library headers
-# include <unistd.h>
+// # include <unistd.h>
 
 // Function declarations
 
@@ -24,7 +24,7 @@
  * @param c The char to output
  * @param fd the file descriptor on which to write
  */
-void	ft_putchar_fd(char c, int fd);
+ssize_t	ft_putchar_fd(char c, int fd);
 
 /**
  * @brief Outputs the string "s" to the given file descriptor
@@ -32,7 +32,7 @@ void	ft_putchar_fd(char c, int fd);
  * @param s The string to output
  * @param fd The file descriptor on which to write
  */
-void	ft_putstr_fd(char *s, int fd);
+ssize_t	ft_putstr_fd(char *s, int fd);
 
 /**
  * @brief Outputs the string "s" to the given file descriptor
@@ -41,7 +41,7 @@ void	ft_putstr_fd(char *s, int fd);
  * @param s The string to output
  * @param fd The file descriptor on which to write
  */
-void	ft_putendl_fd(char *s, int fd);
+ssize_t	ft_putendl_fd(char *s, int fd);
 
 /**
  * @brief Outputs the integer "n" to the given fd
@@ -49,6 +49,6 @@ void	ft_putendl_fd(char *s, int fd);
  * @param n The integer to output
  * @param fd The file descriptor on which to write
  */
-void	ft_putnbr_fd(int n, int fd);
+ssize_t	ft_putnbr_fd(int n, int fd);
 
 #endif // FT_STDIO_H

@@ -6,13 +6,13 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 18:14:42 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/07/17 19:18:48 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/07/18 08:11:33 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/ft_stdio.h"
+#include "../../includes/libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+ssize_t	ft_putchar_fd(char c, int fd)
 {
-	write(fd, &c, 1);
+	return (write(fd, &c, 1));
 }

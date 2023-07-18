@@ -6,11 +6,11 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 23:11:49 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/06/20 18:14:22 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/07/18 08:09:53 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../includes/libft.h"
 
 static int	ft_is_on_set(int c, char const *set);
 

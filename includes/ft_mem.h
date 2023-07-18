@@ -3,8 +3,7 @@
 # define FT_MEM_H
 
 // Standard Library headers
-# include <stddef.h>
-# include <stdlib.h>
+// # include <stdlib.h>
 
 // Function declarations
 

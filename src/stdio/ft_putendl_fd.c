@@ -6,17 +6,19 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 21:40:14 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/07/17 19:18:40 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/07/18 08:11:16 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/ft_stdio.h"
+#include "../../includes/libft.h"
 
-void	ft_putendl_fd(char *s, int fd)
+ssize_t	ft_putendl_fd(char *s, int fd)
 {
 	size_t	str_len;
+	ssize_t	bytes_written;
 
 	str_len = ft_strlen(s);
-	write(fd, s, str_len);
-	write(fd, "\n", 1);
+	bytes_written = write(fd, s, str_len);
+	bytes_written += write(fd, "\n", 1);
+	return (bytes_written);
 }

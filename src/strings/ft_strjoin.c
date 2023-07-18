@@ -6,11 +6,11 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 22:42:17 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/07/12 21:06:51 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/07/18 08:08:37 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../includes/libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
