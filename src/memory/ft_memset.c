@@ -6,7 +6,7 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 22:59:27 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/07/18 08:09:16 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/07/18 11:32:35 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ Example	INT = 4 bytes.
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	t_byte	*memory_addr;
+	t_byte_u	*memory_addr;
 
-	memory_addr = (t_byte *)s;
+	memory_addr = (t_byte_u *)s;
 	while (n--)
-		*memory_addr++ = (t_byte)c;
+		*memory_addr++ = (t_byte_u)c;
 	return (s);
 }

@@ -6,7 +6,7 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/15 10:38:51 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/07/17 19:14:31 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/07/18 11:35:18 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	t_byte			*dest_ptr;
-	const t_byte	*src_ptr;
+	t_byte_u		*dest_ptr;
+	const t_byte_u	*src_ptr;
 
 	if (!dest && !src)
 		return (dest);

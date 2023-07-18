@@ -3,7 +3,7 @@
 # define FT_STRINGS_H
 
 // Standard Library headers
-// # include <stddef.h>
+# include <stddef.h>
 
 // Function declarations
 /**

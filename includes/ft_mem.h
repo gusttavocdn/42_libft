@@ -1,9 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_mem.h                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/18 11:33:54 by gusda-si          #+#    #+#             */
+/*   Updated: 2023/07/18 11:59:30 by gusda-si         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef FT_MEM_H
 # define FT_MEM_H
 
 // Standard Library headers
-// # include <stdlib.h>
+# include <stdlib.h>
 
 // Function declarations
 
@@ -69,5 +80,13 @@ void	*ft_memchr(const void *str, int c, size_t n);
  * @brief This function compares two memory area until n bytes
  */
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
+
+/**
+ * @brief This function swaps two memory areas
+ * @param a First memory area
+ * @param b Second memory area
+ * @param size Size of each memory area
+ */
+void	ft_swap(void *a, void *b, size_t size);
 
 #endif // FT_MEM_H

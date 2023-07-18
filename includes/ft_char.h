@@ -6,7 +6,7 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 19:00:01 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/07/18 08:29:26 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/07/18 11:51:04 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,5 +60,10 @@ int	ft_toupper(int c);
  * @return Returns the converted char
  */
 int	ft_tolower(int c);
+
+/**
+ * @brief This functions verify if a char is a space
+*/
+int	ft_isspace(int c);
 
 #endif // FT_CHAR_H
