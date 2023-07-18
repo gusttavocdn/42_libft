@@ -6,7 +6,7 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 19:00:04 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/07/18 11:59:02 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/07/18 17:10:56 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,14 +46,14 @@ ssize_t	ft_putendl_fd(char *s, int fd);
 /**
  * @brief Outputs the integer "n" to the given fd
  *
- * @param n The integer to output
+ * @param n The number to output
  * @param fd The file descriptor on which to write
  */
-ssize_t	ft_putnbr_fd(int n, int fd);
+ssize_t	ft_putnbr_fd(long int n, int fd);
 
 /**
  * @brief Outputs the integer "nbr" to the given fd
  * using the given "base" as the base for the conversion.
 */
-ssize_t	ft_putnbr_base(int nbr, char *base, int fd);
+ssize_t	ft_putnbr_base(long int nbr, char *base, int fd);
 #endif // FT_STDIO_H

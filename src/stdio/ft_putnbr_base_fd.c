@@ -6,16 +6,16 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 06:30:04 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/07/18 12:01:27 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/07/18 17:11:02 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
 static int		find_base_errors(char *base);
-static ssize_t	print(int number, char *base, int base_len, int fd);
+static ssize_t	print(long int number, char *base, int base_len, int fd);
 
-ssize_t	ft_putnbr_base(int nbr, char *base, int fd)
+ssize_t	ft_putnbr_base(long int nbr, char *base, int fd)
 {
 	int	base_len;
 
@@ -25,22 +25,19 @@ ssize_t	ft_putnbr_base(int nbr, char *base, int fd)
 	return (print(nbr, base, base_len, fd));
 }
 
-static ssize_t	print(int number, char *base, int base_len, int fd)
+static ssize_t	print(long int number, char *base, int base_len, int fd)
 {
-	long int	nbr;
-	ssize_t		bytes_written;
+	ssize_t	bytes_written;
 
-	nbr = number;
 	bytes_written = 0;
-	if (nbr < 0)
+	if (number < 0)
 	{
 		bytes_written += ft_putchar_fd('-', fd);
-		nbr = -nbr;
+		number = -number;
 	}
-	if (nbr < base_len)
-		bytes_written += ft_putchar_fd(base[nbr % base_len], fd);
-	bytes_written += print(nbr / base_len, base, base_len, fd);
-	bytes_written += ft_putchar_fd(base[nbr % base_len], fd);
+	if (number >= base_len)
+		bytes_written += print(number / base_len, base, base_len, fd);
+	bytes_written += ft_putchar_fd(base[number % base_len], fd);
 	return (bytes_written);
 }
 
