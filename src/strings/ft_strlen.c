@@ -6,7 +6,7 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 22:35:05 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/07/18 17:15:22 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/07/23 21:37:03 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ size_t	ft_strlen(const char *s)
 {
 	char	*s_begin;
 
+	if (!s)
+		return (0);
 	s_begin = (char *)s;
 	while (*s != '\0')
 		s++;

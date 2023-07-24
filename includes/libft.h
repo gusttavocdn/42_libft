@@ -6,7 +6,7 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 23:48:40 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/07/18 17:53:06 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/07/23 21:49:54 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@
 # define INT_MIN -2147483648
 # define ULONG_MAX 18446744073709551615UL
 # define NULL_BYTE 1
+# define BUFFER_SIZE 4096
 
 // Types
 

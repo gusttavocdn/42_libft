@@ -6,7 +6,7 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 19:00:04 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/07/18 17:50:36 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/07/23 21:49:53 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define FT_STDIO_H
 
 // Standard Library headers
+# include <stdlib.h>
 # include <unistd.h>
 
 // Function declarations
@@ -57,4 +58,13 @@ ssize_t	ft_putnbr_fd(long int n, int fd);
 */
 
 ssize_t	ft_putnbr_base(long int nbr, char *base, int fd);
+
+/**
+ 	@brief Reads a line from a file descriptor.
+	@param fd File descriptor.
+	@return A pointer to the line read from the file descriptor.
+	@details This functions is capable of handle multiple fd at once.
+*/
+char	*ft_gnl(int fd);
+
 #endif // FT_STDIO_H
