@@ -6,7 +6,7 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 23:11:49 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/06/20 18:14:22 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/07/25 15:50:00 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	start = 0;
 	end = ft_strlen(s1) - NULL_BYTE;
-	while (ft_is_on_set(s1[end], set))
+	while (ft_is_on_set(s1[end], set) && end)
 		end--;
 	while (ft_is_on_set(s1[start], set))
 		start++;
