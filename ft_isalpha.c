@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gusda-si <gusda-si@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 19:14:29 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/07/12 17:51:21 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/07/25 00:44:52 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 int	ft_isalpha(int c)
 {
 	if (c >= 'A' && c <= 'Z')
-		return (TRUE);
+		return (1);
 	if (c >= 'a' && c <= 'z')
-		return (TRUE);
-	return (FALSE);
+		return (1);
+	return (0);
 }

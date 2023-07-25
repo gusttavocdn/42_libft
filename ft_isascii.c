@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gusda-si <gusda-si@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 22:19:29 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/06/17 23:48:19 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/07/25 00:44:52 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
-		return (TRUE);
-	return (FALSE);
+		return (1);
+	return (0);
 }

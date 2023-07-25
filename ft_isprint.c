@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gusda-si <gusda-si@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 22:20:58 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/06/14 22:21:30 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/07/25 00:44:50 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 int	ft_isprint(int c)
 {
 	if ((c >= 32 && c <= 126))
-		return (TRUE);
-	return (FALSE);
+		return (1);
+	return (0);
 }
