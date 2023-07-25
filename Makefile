@@ -75,9 +75,11 @@ BLUE		:= \033[1;34m
 CYAN 		:= \033[1;36m
 RM		    := rm -f
 
-${NAME}:	${OBJS}
+INCLUDES    := libft.h
+
+${NAME}:	${OBJS} ${INCLUDES}
 			@echo "$(GREEN)Creating ${CLR_RMV}of ${YELLOW}$(NAME) ${CLR_RMV}..."
-			ar -rcs ${NAME} ${OBJS}
+			ar -rcs ${NAME} ${OBJS} ${INCLUDES}
 			@echo "$(GREEN)$(NAME) created[0m ✔️"
 
 all:		${NAME}
