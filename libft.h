@@ -6,7 +6,7 @@
 /*   By: gusda-si <gusda-si@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 23:48:40 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/07/25 01:17:15 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/07/25 01:26:57 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 // Auxiliar Libraries
 
-# include <stddef.h>
 // # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
@@ -24,7 +23,6 @@
 
 # define TRUE 1
 # define FALSE 0
-// # define ULONG_MAX 18446744073709551615UL
 # define NULL_BYTE 1
 
 // Types
