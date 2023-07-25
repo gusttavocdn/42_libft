@@ -6,7 +6,7 @@
 /*   By: gusda-si <gusda-si@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 23:48:40 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/07/25 00:43:56 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/07/25 01:17:15 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,7 @@
 
 # define TRUE 1
 # define FALSE 0
-# define INT_MAX 2147483647
-# define INT_MIN -2147483648
-# define ULONG_MAX 18446744073709551615UL
+// # define ULONG_MAX 18446744073709551615UL
 # define NULL_BYTE 1
 
 // Types

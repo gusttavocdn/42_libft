@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gusda-si <gusda-si@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 12:17:38 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/07/12 21:03:18 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/07/25 01:17:18 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*pointer;
 
-	if (nmemb > ULONG_MAX / size)
+	if (nmemb > 18446744073709551615UL / size)
 		return (NULL);
 	pointer = malloc(nmemb * size);
 	if (pointer == NULL)
