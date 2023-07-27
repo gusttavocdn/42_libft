@@ -6,7 +6,7 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 19:00:04 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/07/23 21:49:53 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/07/27 02:41:38 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,5 +66,14 @@ ssize_t	ft_putnbr_base(long int nbr, char *base, int fd);
 	@details This functions is capable of handle multiple fd at once.
 */
 char	*ft_gnl(int fd);
+
+
+/**
+ * @brief Outputs the unsigned integer "n" to the given fd
+ * @param n The number to output
+ * @param fd The file descriptor on which to write
+ * @return The number of bytes written
+*/
+ssize_t	ft_putnbr_unsigned_fd(unsigned int n, int fd);
 
 #endif // FT_STDIO_H
