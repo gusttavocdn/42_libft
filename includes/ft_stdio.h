@@ -67,7 +67,6 @@ ssize_t	ft_putnbr_base(long int nbr, char *base, int fd);
 */
 char	*ft_gnl(int fd);
 
-
 /**
  * @brief Outputs the unsigned integer "n" to the given fd
  * @param n The number to output

@@ -6,7 +6,7 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 02:14:18 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/07/27 02:14:36 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/07/19 12:12:15 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,19 +34,4 @@ int	ft_atoi(const char *str)
 		str++;
 	}
 	return (number * signal);
-}
-
-
-// Make a main to test the above function
-
-int	main(void)
-{
-	char	*str;
-	int		number;
-
-	str = "   -1234567890";
-	number = ft_atoi(str);
-	printf("The string is: %s\n", str);
-	printf("The number is: %d\n", number);
-	return (0);
 }
