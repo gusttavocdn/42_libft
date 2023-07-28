@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_unsigned_fd.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/14 22:35:05 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/07/25 18:36:51 by gusda-si         ###   ########.fr       */
+/*   Created: 2023/07/27 02:38:49 by gusda-si          #+#    #+#             */
+/*   Updated: 2023/07/27 02:39:38 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-size_t	ft_strlen(const char *s)
+ssize_t	ft_putnbr_unsigned_fd(unsigned int n, int fd)
 {
-	char	*s_begin;
+	t_byte_u	base_len;
+	ssize_t		bytes_written;
 
-	if (!s)
-		return (0);
-	s_begin = (char *)s;
-	while (*s != '\0')
-		s++;
-	return ((size_t)(s - s_begin));
+	bytes_written = 0;
+	base_len = 10;
+	if (n >= base_len)
+		bytes_written += ft_putnbr_unsigned_fd(n / 10, fd);
+	bytes_written += ft_putchar_fd((n % 10) + '0', fd);
+	return (bytes_written);
 }

@@ -6,16 +6,16 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 20:22:13 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/07/18 08:08:19 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/07/25 18:38:59 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-static size_t	strlen_custom(const char *s, char c);
 static char		*create_word(const char *s, char c);
 static size_t	count_words(const char *s, char c);
 static size_t	walk_through_delimiters(const char *s, char c);
+static void		*free_str_arr_on_error(char **str_arr, size_t size);
 
 char	**ft_split(char const *s, char c)
 {
@@ -34,10 +34,26 @@ char	**ft_split(char const *s, char c)
 	{
 		s += walk_through_delimiters(s, c);
 		str_arr[current_word] = create_word(s, c);
+		if (!str_arr[current_word])
+			return (free_str_arr_on_error(str_arr, current_word));
 		s += ft_strlen(str_arr[current_word]);
 		current_word++;
 	}
 	return (str_arr);
+}
+
+static void	*free_str_arr_on_error(char **str_arr, size_t size)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < size)
+	{
+		free(str_arr[i]);
+		i++;
+	}
+	free(str_arr);
+	return (NULL);
 }
 
 static size_t	count_words(const char *s, char c)
@@ -67,8 +83,14 @@ static char	*create_word(const char *s, char c)
 	size_t	str_len;
 	size_t	i;
 
-	str_len = strlen_custom(s, c);
+	str_len = 0;
+	while (*s == c)
+		s++;
+	while (s[str_len] != '\0' && s[str_len] != (unsigned char)c)
+		str_len++;
 	new_str = (char *)ft_calloc(str_len + NULL_BYTE, sizeof(char));
+	if (!new_str)
+		return (NULL);
 	i = 0;
 	while (i < str_len)
 	{
@@ -79,22 +101,12 @@ static char	*create_word(const char *s, char c)
 	return (new_str);
 }
 
-static size_t	strlen_custom(const char *s, char c)
-{
-	char	*str_begin;
-
-	while (*s == c)
-		s++;
-	str_begin = (char *)s;
-	while (*s != '\0' && *s != (unsigned char)c)
-		s++;
-	return ((s - str_begin));
-}
-
 static size_t	walk_through_delimiters(const char *s, char c)
 {
 	size_t	walked_bytes;
 
+	if (!s)
+		return (0);
 	walked_bytes = 0;
 	while (*s == (unsigned char)c)
 	{

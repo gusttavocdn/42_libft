@@ -6,7 +6,7 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 12:43:05 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/07/23 21:48:01 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/07/25 19:14:28 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ static void	read_file_content(int fd, char **static_buffer)
 	ssize_t	bytes_read;
 	char	*local_buffer;
 
+	local_buffer = (char *)malloc((BUFFER_SIZE + NULL_BYTE) * sizeof(char));
 	if (!local_buffer)
 		return ;
 	bytes_read = read(fd, local_buffer, BUFFER_SIZE);
@@ -49,7 +50,7 @@ static void	read_file_content(int fd, char **static_buffer)
 	while (bytes_read > 0 && !ft_strchr(local_buffer, '\n'))
 	{
 		update_static_buffer(static_buffer, ft_strjoin(*static_buffer,
-				local_buffer));
+					local_buffer));
 		bytes_read = read(fd, local_buffer, BUFFER_SIZE);
 		local_buffer[bytes_read] = '\0';
 	}
@@ -58,7 +59,7 @@ static void	read_file_content(int fd, char **static_buffer)
 		update_static_buffer(static_buffer, NULL);
 	else
 		update_static_buffer(static_buffer, ft_strjoin(*static_buffer,
-				local_buffer));
+					local_buffer));
 	free(local_buffer);
 }
 
@@ -107,6 +108,6 @@ static char	*make_line(size_t line_size, char **static_buffer, int is_last_line)
 		return (NULL);
 	ft_strlcpy(line, *static_buffer, line_size + NULL_BYTE + LINE_BREAK_BYTE);
 	update_static_buffer(static_buffer, ft_strdup(*static_buffer + line_size
-			+ LINE_BREAK_BYTE));
+				+ LINE_BREAK_BYTE));
 	return (line);
 }
