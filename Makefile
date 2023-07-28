@@ -9,6 +9,8 @@ FLAGS    := -Wall -Wextra -Werror
 #                                 PROGRAM'S SRCS                               #
 ################################################################################
 
+MAIN := main.c
+
 SRCS        :=      ft_memset.c \
                           ft_memchr.c \
                           ft_strlen.c \
@@ -98,10 +100,14 @@ fclean:		clean
 			@ ${RM} ${NAME}
 			@ echo "$(RED)Deleting $(CYAN)$(NAME) $(CLR_RMV)binary ✔️"
 
+ run: 	 	${SRCS} ${SRCS_BONUS}
+			@echo "$(GREEN)Running $(CYAN)$(NAME) $(CLR_RMV)...\n"
+			@$(CC) $(FLAGS) -g ${SRCS} ${SRCS_BONUS} ${MAIN} -o main
+
 # so:
 # 	$(CC) -nostartfiles -fPIC $(FLAGS) $(SRCS)
 # 	gcc -nostartfiles -shared -o libft.so $(OBJS)
 
 re:			fclean all
 
-.PHONY:		all clean fclean re
+.PHONY:		all clean fclean re run
