@@ -79,12 +79,12 @@ RM		    := rm -f
 
 INCLUDES    := libft.h
 
+all:		${NAME}
+
 ${NAME}:	${OBJS} ${INCLUDES}
 			@echo "$(GREEN)Creating ${CLR_RMV}of ${YELLOW}$(NAME) ${CLR_RMV}..."
 			ar -rcs ${NAME} ${OBJS} ${INCLUDES}
 			@echo "$(GREEN)$(NAME) created[0m ✔️"
-
-all:		${NAME}
 
 bonus:		all ${OBJS_BONUS}
 			@echo "$(GREEN)Creating ${CLR_RMV}of ${YELLOW}$(NAME) ${CLR_RMV}..."
