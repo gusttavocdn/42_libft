@@ -30,10 +30,14 @@
 # define TRUE 1
 # define FALSE 0
 # define INT_MAX 2147483647
-# define INT_MIN -2147483648
+# define INT_MIN (-2147483648)
 # define ULONG_MAX 18446744073709551615UL
 # define NULL_BYTE 1
 # define BUFFER_SIZE 4096
+# define HEX_LOWER "0123456789abcdef"
+# define HEX_UPPER "0123456789ABCDEF"
+# define HEX_SIZE 16
+# define DECIMAL "0123456789"
 
 // Types
 
@@ -64,8 +68,7 @@ typedef int64_t		t_8byte_i;
 // Enum to representing boolean values
 typedef enum e_bool
 {
-	true = TRUE,
-	false = FALSE,
+	my_false,
+	my_true
 }					t_bool;
-
 #endif

@@ -6,7 +6,7 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 19:00:04 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/07/27 02:41:38 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/07/23 21:49:53 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,5 +74,12 @@ char	*ft_gnl(int fd);
  * @return The number of bytes written
 */
 ssize_t	ft_putnbr_unsigned_fd(unsigned int n, int fd);
+
+/**
+ * @brief Outputs a memory address to the given fd
+ * @param number The memory address to output
+ * @param fd The file descriptor on which to write
+ */
+ssize_t	ft_putmem_fd(unsigned long number, int fd);
 
 #endif // FT_STDIO_H
