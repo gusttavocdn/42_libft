@@ -4,7 +4,7 @@
 
 NAME        := libft.a
 CC        := cc
-FLAGS    := -Wall -Wextra -Werror 
+CFLAGS    := -Wall -Wextra -Werror 
 ################################################################################
 #                                 PROGRAM'S SRCS                               #
 ################################################################################
@@ -62,7 +62,7 @@ OBJS_BONUS   := $(SRCS_BONUS:.c=.o)
 OBJS        := $(SRCS:.c=.o)
 
 .c.o:
-	${CC} ${FLAGS} -c $< -o ${<:.c=.o}
+	${CC} ${CFLAGS} -c -I ./ $< -o ${<:.c=.o}
 
 ################################################################################
 #                                  Makefile  objs                              #
@@ -75,7 +75,7 @@ GREEN		:= \033[1;32m
 YELLOW		:= \033[1;33m
 BLUE		:= \033[1;34m
 CYAN 		:= \033[1;36m
-RM		    := rm -f
+RM		    := rm -rf
 
 INCLUDES    := libft.h
 
@@ -93,7 +93,7 @@ bonus:		all ${OBJS_BONUS}
 
 
 clean:
-			@ ${RM} *.o */*.o */*/*.o
+			@ ${RM} ${OBJS} ${OBJS_BONUS}
 			@ echo "$(RED)Deleting $(CYAN)$(NAME) $(CLR_RMV)objs ✔️"
 
 fclean:		clean
@@ -102,12 +102,12 @@ fclean:		clean
 
  run: 	 	${SRCS} ${SRCS_BONUS}
 			@echo "$(GREEN)Running $(CYAN)$(NAME) $(CLR_RMV)...\n"
-			@$(CC) $(FLAGS) -g ${SRCS} ${SRCS_BONUS} ${MAIN} -o main
+			@$(CC) $(CFLAGS) -g ${SRCS} ${SRCS_BONUS} ${MAIN} -o main
 
 # so:
-# 	$(CC) -nostartfiles -fPIC $(FLAGS) $(SRCS)
+# 	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
 # 	gcc -nostartfiles -shared -o libft.so $(OBJS)
 
 re:			fclean all
 
-.PHONY:		all clean fclean re run
+.PHONY:		all clean fclean re run bonus
