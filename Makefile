@@ -4,7 +4,7 @@
 
 NAME        := libft.a
 CC        := cc
-FLAGS    := -Wall -Wextra -Werror 
+CFLAGS    := -Wall -Wextra -Werror 
 
 ################################################################################
 #                                 LIBRARIES PATHS                              #
@@ -26,7 +26,6 @@ INCLUDES   := $(addprefix ./includes/, ft_char.h ft_math.h ft_mem.h ft_strings.h
 #                                 PROGRAM'S SRCS                               #
 ################################################################################
 
-
 CHAR_LIB_SRCS := $(addprefix $(CHAR_LIB)/, ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
 											ft_isprint.c ft_tolower.c ft_toupper.c ft_isspace.c)
 
@@ -46,7 +45,7 @@ SRCS        :=  $(CHAR_LIB_SRCS) $(MATH_LIB_SRCS) $(MEM_LIB_SRCS) $(STR_LIB_SRCS
 OBJS        := $(SRCS:.c=.o)
 
 .c.o:
-	${CC} ${FLAGS} -c $< -o ${<:.c=.o}
+	${CC} ${CFLAGS} -c $< -o $@
 
 ################################################################################
 #                                  Makefile  objs                              #
@@ -61,15 +60,15 @@ BLUE		:= \033[1;34m
 CYAN 		:= \033[1;36m
 RM		    := rm -f
 
-${NAME}:	${OBJS} ${INCLUDES}
-			@echo "$(GREEN)Creating ${CLR_RMV}of ${YELLOW}$(NAME) ${CLR_RMV}..."
-			ar -rcs ${NAME} ${OBJS} ${INCLUDES}
-			@echo "$(GREEN)$(NAME) created[0m ✔️"
-
 all:		${NAME}
 
+${NAME}:	${OBJS} ${INCLUDES}
+			@echo "$(GREEN)Creating ${CLR_RMV}of ${YELLOW}$(NAME) ${CLR_RMV}..."
+			@ar -rcs ${NAME} ${OBJS} ${INCLUDES}
+			@echo "$(GREEN)$(NAME) created[0m ✔️"
+
 clean:
-			@ ${RM} *.o */*.o */*/*.o
+			@ ${RM} ${OBJS}
 			@ echo "$(RED)Deleting $(CYAN)$(NAME) $(CLR_RMV)objs ✔️"
 
 fclean:		clean
