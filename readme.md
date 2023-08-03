@@ -1,150 +1,121 @@
 <h1 align="center"><strong>LIBFT - @42SP</strong></h1>
 
-<p align="center">Esse projeto é sobre desenvolver uma biblioteca estatica em C. Contem minha propria implementação de diversas funções da standard lib do C.</p>
+<p align="center">This was the first project of the 42 curriculum. The project aims to recreate several functions from the standard libc.</p>
 
 <p align="center"><a href="https://www.42sp.org.br/" target="_blank"><img src="https://img.shields.io/static/v1?label=&message=SP&color=000&style=for-the-badge&logo=42""></a></p>
 <p align="center"><img src="https://user-images.githubusercontent.com/81205527/149165832-9344c9e5-6075-4268-b276-26b60efc5733.png"> </p>
  <p align="center">Nota: <strong>122/100</strong> ✔️ </p>
 
-<h2 align="center"><strong>Oque é a Libft?</strong></h2>
+<h2 align="center"><strong>What is the LIBFT?</strong></h2>
 
-Esse é o primeiro projeto do curriculo da 42. Consiste em recriar diversas funções padrão
-da linguagem para serem usadas durante o desenvolvimento du curso, visto que não podemos
-usar as originais. Essa é uma biblioteca vive e novas funções podem ser adicionadas a ela
-aumentando suas funcionalidades.
+This is the first project of the 42 curriculum. It consists of recreating various standard functions of the language to be used during the course development, 
+since we cannot use the originals. This is a living library and new functions can be added to it, increasing its functionalities.
 
-<h1 align="center"><strong>Funções</strong></h1>
+<h1 align="center"><strong>Functions</strong></h1>
 
-## Funções da biblioteca <ctype.h>
+## Functions to handle char type
 
-- **[`ft_isalpha`](ft_atoi.c)** - Verifica se determinado caractere é alfabético.
+- **[`ft_isalpha`](src/char/ft_isalpha.c)** - Verifies if the param is an alphabet letter.
 
-- **[`ft_isdigit`](ft_isdigit.c)** - checa se é um digito (0 a 9).
+- **[`ft_isdigit`](src/char/ft_isdigit.c)** - Verifies if the param is a digit(0 a 9).
 
-- **[`ft_isalnum`](ft_isalnum.c)** - checa se é um caractere alfanumérico.
+- **[`ft_isalnum`](src/char/ft_isalnum.c)** - Verifies if the param is a alphanumeric.
 
-- **[`ft_isascii`](ft_isascii.c)** - checa se é um caractere que faz parte da tabela ASCII tradicional.
+- **[`ft_isascii`](src/char/ft_isascii.c)** - Verifies if the param is a ASCII digit.
 
-- **[`ft_isprint`](ft_isprint.c)** - checa se é um caractere printável.
+- **[`ft_isprint`](src/char/ft_isprint.c)** - Verifies if the param is printable.
 
-- **[`ft_tolower`](ft_tolower.c)** - converte o caractere para maiúsculo.
+- **[`ft_tolower`](src/char/ft_tolower.c)** - Lowercase the param.
 
-- **[`ft_toupper`](ft_toupper.c)** - converte o caractere para minúsculo.
+- **[`ft_toupper`](src/char/ft_toupper.c)** - Uppercase the param.
 
-## Funções da biblioteca <string.h>
+- **[`ft_isspace`](src/char/ft_isspace.c)** - Verifies if the param is a space.
 
-- **[`ft_memset`](ft_memset.c)** - Enche o bloco de memória com um mesmo byte.
+## Functions to handle strings
 
-- **[`ft_strlen`](ft_strlen.c)** - Calcula o tamanho de uma string.
+- **[`ft_strlen`](src/strings/ft_strlen.c)** - Calculates the length of a string.
 
-- **[`ft_bzero`](ft_bzero.c)** - Preenche uma string com zero.
+- **[`ft_strlcpy`](src/strings/ft_strlcpy.c)** - Copies a string from a buffer to another.
 
-- **[`ft_memcpy`](ft_memcpy.c)** - Copia uma área de memória.
+- **[`ft_strlcat`](src/strings/ft_strlcat.c)** - Concatenates two strings in a buffer.
 
-- **[`ft_memmove`](ft_memmove.c)** - Copia uma área de memória.
+- **[`ft_strchr`](src/strings/ft_strchr.c)** - Locates the first occurrence of a character in a string.
 
-- **[`ft_strlcpy`](ft_strlcpy.c)** - Copia uma string para um tamanho especificado.
+- **[`ft_strrchr`](src/strings/ft_strrchr.c)** - Locates the last occurrence of a character in a string.
 
-- **[`ft_strlcat`](ft_strlcat.c)** - Concatena uma string para um um tamanho especificado.
+- **[`ft_strnrcmp`](src/strings/ft_strncmp.c)**- Compares two strings.
 
-- **[`ft_strchr`](ft_strchr.c)** - Localiza a primeira ocorrência de um caractere em uma string.
+- **[`ft_strnstr`](src/strings/ft_strnstr.c)** - Locates a substring in a string.
 
-- **[`ft_strrchr`](ft_strrchr.c)** - Localiza a última ocorrência de um caractere em uma string.
+- **[`ft_strdup`](src/strings/ft_strdup.c)** - Allocates memory and copies a string.
 
-- **[`ft_strnrcmp`](ft_strncmp.c)**- Compara duas strings.
+- **[`ft_strmapi`](src/strings/ft_strmapi.c)** - Applies a function to each character of a string and returns a new string.
 
-- **[`ft_memchr`](ft_memchr.c)** - Checa um bloco de memória em busca de um caractere.
+- **[`ft_striteri`](src/strings/ft_striteri.c)** - Applies a function to each character of a string.
 
-- **[`ft_memcmp`](ft_memcmp.c)** - Compara blocos de memória.
+- **[`ft_substr`](src/strings/ft_substr.c)** - Allocates memory and returns a substring from a string.
 
-- **[`ft_strnstr`](ft_strnstr.c)** - Localiza uma substring em uma string.
+- **[`ft_strjoin`](src/strings/ft_strjoin.c)** - Allocates memory and concatenates two strings.
 
-- **[`ft_strdup`](ft_strdup.c)** - Cria uma duplicata da string passada como parâmetro.
+- **[`ft_strtrim`](src/strings/ft_strtrim.c)** - Allocates memory and returns a copy of a string trimmed.
 
-## Funções da biblioteca <stdlib.h>
+- **[`ft_split`](src/strings/ft_split.c)** - Allocates memory and returns an array of strings obtained by splitting a string using a delimiter.
 
-- **[`ft_atoi`](ft_atoi.c)** - Converte uma string para um inteiro.
+## Function to handle memory
 
-- **[`ft_calloc`](ft_calloc.c)** - Alloca memória e seta o valor de todos os bytes para 0.
+- **[`ft_memset`](src/memory/ft_memset.c)** - Fills a memory block with a same byte.
 
-## Funções exclusivas do projeto
+- **[`ft_bzero`](src/memory/ft_bzero.c)** - Fill a memory block with '\0'.
+- 
+- **[`ft_memcpy`](src/memory/ft_memcpy.c)** - Copies a memory area.
 
-- **[`ft_substr`](ft_substr.c)** - Retorna uma substring de uma string.
+- **[`ft_memmove`](src/memory/ft_memmove.c)** - Copies a memory area, even if the memory areas overlap.
 
-- **[`ft_strjoin`](ft_strjoin.c)** - Retorna uma string que é a junção das duas strings passadas como parâmetro.
+- **[`ft_memchr`](src/memory/ft_memchr.c)** - Locates a byte in a memory block.
 
-- **[`ft_strtrim`](ft_strtrim.c)** - Corta o início e fim de uma string quando achada a sequência de caracteres
-  passada.
+- **[`ft_memcmp`](src/memory/ft_memcmp.c)** - Compares two memory blocks.
 
-- **[`ft_split`](ft_split.c)** -Separa uma string em várias substrings delimitadas por um caractere.
+- **[`ft_calloc`](src/memory/ft_calloc.c)** - Allocates memory and fills it with '\0'.
 
-- **[`ft_itoa`](ft_itoa.c)** - Converte um número em string.
+- **[`ft_swap.c`](src/memory/ft_swap.c)** - Swaps two variables.
 
-- **[`ft_strmapi`](ft_strmapi.c)** - aplica uma função em uma string e retorna uma nova string modifica.
+## Functions to handle math operations
 
-- **[`ft_striteri`](ft_striteri.c)** - Aplica uma função em cada char de uma string.
+- **[`ft_atoi`](src/math/ft_atoi.c)** - Converts a string to an integer.
 
-- **[`ft_putchar_fd`](ft_putchar_fd.c)** - Escreve um caractere em um fd
+- **[`ft_atoi_base`](src/math/ft_atoi_base.c)** - Converts a string to an integer in a given base.
 
-- **[`ft_putstr_fd`](ft_putstr_fd.c)** - Escreve uma string em um fd.
+- **[`ft_itoa`](src/math/ft_itoa.c)** - Returns a string representing an integer.
 
-- **[`ft_putendl_fd`](ft_putendl_fd.c)** - Escreve uma string seguida por uma quebra de linha em um fd.
+- **[`ft_itoa_base`](src/math/ft_itoa_base.c)** - Returns a string representing an integer in a given base.
 
-- **[`ft_putnbr_fd`](ft_putnbr_fd.c)** - Escreve um número em um file descriptor.
+- **[`ft_itoa_base_u`](src/math/ft_itoa_base_u.c)** - Returns a string representing an unsigned integer in a given base.
 
-[//]: # (## Funções para manusear Linked Lists)
+- **[`ft_convert_base`](src/math/ft_convert_base.c)** - Converts a number from a base to another.
 
-[//]: # ()
+- **[`ft_calc_nbr_digits`](src/math/ft_calc_nbr_digits.c)** - Calculates the number of digits of a number.
 
-[//]: # (- **ft_lstnew** - Cria um novo elemento para uma lista.)
+- **[`ft_abs`](src/math/ft_abs.c)** - Returns the absolute value of a number.
 
-[//]: # ()
+## Functions to handle I/O
 
-[//]: # (- **ft_lstadd_front** - Adiciona um elemento no início de uma lista.)
+- **[`ft_putchar_fd`](src/stdio/ft_putchar_fd.c)** - Writes a character to a file descriptor.
 
-[//]: # ()
+- **[`ft_putstr_fd`](src/stdio/ft_putstr_fd.c)** - Writes a string to a file descriptor.
 
-[//]: # (- **ft_lstsize** - Conta o número de elementos em uma lista.)
+- **[`ft_putendl_fd`](src/stdio/ft_putendl_fd.c)** - Writes a string to a file descriptor, followed by a newline.
 
-[//]: # ()
+- **[`ft_putnbr_fd`](src/stdio/ft_putnbr_fd.c)** - Writes a int to a file descriptor.
 
-[//]: # (- **ft_lstlast** - Retorna o último elemento de uma lista.)
+- **[`ft_gnl`](src/stdio/ft_gnl.c)** - Reads a line from a file descriptor.
 
-[//]: # ()
+- **[`ft_putmem_fd`](src/stdio/ft_putmem_fd.c)** - Writes a memory block to a file descriptor.
 
-[//]: # (- **ft_lstadd_back** - Adiciona um elemento ao fim de uma lista.)
+- **[`ft_putnbr_base_fd`](src/stdio/ft_putnbr_base_fd.c)** - Writes a number in a given base to a file descriptor.
 
-[//]: # ()
+- **[`ft_putnbr_unsigned_fd`](src/stdio/ft_putnbr_unsigned_fd.c)** - Writes an unsigned int to a file descriptor.
 
-[//]: # (- **ft_lstclear** - Deleta e da free em uma lista.)
 
-[//]: # ()
+## Notes
 
-[//]: # (- **ft_lstiter** - Aplica uma função a cada elemento de uma lista.)
-
-[//]: # ()
-
-[//]: # (- **ft_lstmap** - Aplica uma função a cada elemento de uma lista e retorna uma uma nova lista com as aplicações.)
-
-[//]: # (## Funções Extras)
-
-[//]: # ()
-
-[//]: # (- **get_next_line** - Função que le um arquivo uma linha por vez.)
-
-[//]: # (- **ft_ftprintf** - Função que exibe uma string formatada na tela.)
-
-[//]: # (- **ft_put_unsigned_fd** - Exibe um unsigned int em um fd.)
-
-[//]: # (- **ft_print_hex_nbr** - Exibe um numero em hexadecimal no stdout.)
-
-[//]: # (- **ft_print_hex_memory** - Exibe um ponto de memoria em hexadecimal na tela.)
-
-<h2 align="center"><strong>Principais Conceitos Aprendidos</strong></h2>
-
-- Criação de algoritmos.
-- Estrutura de dados (Linked Lists)
-- Fundamentos da linguagem C
-- Manipulação de Strings
-- Gerenciamento de memória
-- Manipulação de ponteiros.
+This is an extensible library, so I may add more functions in the future.
