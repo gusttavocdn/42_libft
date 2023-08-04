@@ -5,6 +5,7 @@
 NAME        := libft.a
 CC        := cc
 CFLAGS    := -Wall -Wextra -Werror 
+
 ################################################################################
 #                                 PROGRAM'S SRCS                               #
 ################################################################################
@@ -58,11 +59,9 @@ SRCS_BONUS :=   ft_lstnew_bonus.c \
                 ft_lstmap_bonus.c \
 
 OBJS_BONUS   := $(SRCS_BONUS:.c=.o)
-
 OBJS        := $(SRCS:.c=.o)
 
-.c.o:
-	${CC} ${CFLAGS} -c -I ./ $< -o ${<:.c=.o}
+HEADER    := libft.h
 
 ################################################################################
 #                                  Makefile  objs                              #
@@ -77,20 +76,25 @@ BLUE		:= \033[1;34m
 CYAN 		:= \033[1;36m
 RM		    := rm -rf
 
-INCLUDES    := libft.h
 
 all:		${NAME}
 
-${NAME}:	${OBJS} ${INCLUDES}
-			@echo "$(GREEN)Creating ${CLR_RMV}of ${YELLOW}$(NAME) ${CLR_RMV}..."
-			ar -rcs ${NAME} ${OBJS} ${INCLUDES}
-			@echo "$(GREEN)$(NAME) created[0m ✔️"
+${NAME}:	${OBJS} ${HEADER}
+			@ar -rcs ${NAME} ${OBJS} ${HEADER}
+			@echo "$(GREEN)$(NAME) created$(CLR_RMV) ✔️"
 
-bonus:		all ${OBJS_BONUS}
-			@echo "$(GREEN)Creating ${CLR_RMV}of ${YELLOW}$(NAME) ${CLR_RMV}..."
-			ar -rcs ${NAME} ${OBJS_BONUS}
-			@echo "$(GREEN)$(NAME) created[0m ✔️"
+$(OBJS):	$(SRCS)
+			@echo "$(GREEN)Creating ${CLR_RMV}of ${YELLOW}$(NAME)${CLR_RMV}..."
+			@${CC} ${CFLAGS} $^ -c -I ./
 
+
+bonus:	${OBJS_BONUS}
+
+$(OBJS_BONUS):	$(SRCS_BONUS)
+				@echo "$(GREEN)Creating bonus${CLR_RMV}..."
+				@${CC} ${CFLAGS} -c  $^ -I ./
+				@ar -rcs ${NAME} ${OBJS_BONUS}
+				@echo "$(GREEN)Created$(CLR_RMV) ✔️"
 
 clean:
 			@ ${RM} ${OBJS} ${OBJS_BONUS}
@@ -103,10 +107,6 @@ fclean:		clean
  run: 	 	${SRCS} ${SRCS_BONUS}
 			@echo "$(GREEN)Running $(CYAN)$(NAME) $(CLR_RMV)...\n"
 			@$(CC) $(CFLAGS) -g ${SRCS} ${SRCS_BONUS} ${MAIN} -o main
-
-# so:
-# 	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
-# 	gcc -nostartfiles -shared -o libft.so $(OBJS)
 
 re:			fclean all
 
