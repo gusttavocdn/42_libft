@@ -15,6 +15,7 @@ MATH_LIB := ./src/math
 MEM_LIB := ./src/memory
 STR_LIB := ./src/strings
 STDIO_LIB := ./src/stdio
+PRINTF_LIB := ./src/ft_printf
 
 ################################################################################
 #                                 INCLUDES                                     #
@@ -42,7 +43,9 @@ STDIO_LIB_SRCS := $(addprefix $(STDIO_LIB)/, ft_putchar_fd.c ft_putendl_fd.c ft_
 											ft_putnbr_base_fd.c ft_gnl.c ft_putnbr_unsigned_fd.c \
 											ft_putmem_fd.c)
 
-SRCS        :=  $(CHAR_LIB_SRCS) $(MATH_LIB_SRCS) $(MEM_LIB_SRCS) $(STR_LIB_SRCS) $(STDIO_LIB_SRCS)
+PRINTF_LIB_SRCS := $(addprefix $(PRINTF_LIB)/, ft_printf.c specifier_handler.c)
+
+SRCS        :=  $(CHAR_LIB_SRCS) $(MATH_LIB_SRCS) $(MEM_LIB_SRCS) $(STR_LIB_SRCS) $(STDIO_LIB_SRCS) $(PRINTF_LIB_SRCS)
                           
 OBJS        := $(SRCS:.c=.o)
 
