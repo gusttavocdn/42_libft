@@ -13,8 +13,6 @@
 #ifndef FT_MEM_H
 # define FT_MEM_H
 
-// Standard Library headers
-# include <stdlib.h>
 
 // Function declarations
 

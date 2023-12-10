@@ -12,7 +12,7 @@
 
 #include "../../includes/libft.h"
 
-static t_bool	there_is_base_errors(char *base);
+static bool	there_is_base_errors(char *base);
 
 char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
 {
@@ -26,7 +26,7 @@ char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
 	return (converted_number);
 }
 
-static t_bool	there_is_base_errors(char *base)
+static bool	there_is_base_errors(char *base)
 {
 	int	i;
 	int	j;
@@ -37,9 +37,9 @@ static t_bool	there_is_base_errors(char *base)
 	while (i < base_len)
 	{
 		if (ft_isspace(base[i]))
-			return (my_true);
+			return (true);
 		if (base[i] == '+' || base[i] == '-')
-			return (my_true);
+			return (true);
 		j = i + 1;
 		while (j < base_len)
 		{
@@ -49,5 +49,5 @@ static t_bool	there_is_base_errors(char *base)
 		}
 		i++;
 	}
-	return (my_false);
+	return (false);
 }

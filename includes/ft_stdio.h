@@ -15,7 +15,6 @@
 
 // Standard Library headers
 # include <stdlib.h>
-# include <unistd.h>
 
 // Function declarations
 

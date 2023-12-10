@@ -15,7 +15,8 @@
 
 // Related headers
 # include <stdarg.h>
-# include <libft.h>
+#include <stdbool.h>
+#include "../includes/libft.h"
 
 // Enum declarations
 typedef enum e_specifiers
@@ -38,11 +39,11 @@ typedef enum e_specifiers
 // Struct declarations
 typedef struct s_flags
 {
-	t_bool			has_hash;
-	t_bool			has_zero;
-	t_bool			has_space;
-	t_bool			has_plus;
-	t_bool			has_minus;
+	bool			has_hash;
+	bool			has_zero;
+	bool			has_space;
+	bool			has_plus;
+	bool			has_minus;
 	t_specifiers	specifier;
 	int				width;
 	int				precision;
@@ -57,8 +58,8 @@ int					ft_printf(const char *format, ...);
 int					handle_just_specifier(char specifier, va_list args);
 int					handle_flags(const char *str, va_list args,
 						int *walked_bytes);
-t_bool				is_specifier(char flag);
-t_bool				is_flag(char flag);
+bool				is_specifier(char flag);
+bool				is_flag(char flag);
 int					apply_prefix(t_flags *flags, char *format);
 int					apply_width(t_flags *flags, char *number,
 						char padding_char);

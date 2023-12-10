@@ -16,7 +16,7 @@
 #define DECIMAL_BASE_LEN 10
 
 static int		find_digit_on_base(char digit, char *base);
-static t_bool	there_is_base_errors(char *base);
+static bool	there_is_base_errors(char *base);
 
 int	ft_atoi_base(char *str, char *base)
 {
@@ -46,7 +46,7 @@ int	ft_atoi_base(char *str, char *base)
 	return (number * signal);
 }
 
-static t_bool	there_is_base_errors(char *base)
+static bool	there_is_base_errors(char *base)
 {
 	int	i;
 	int	j;
@@ -57,9 +57,9 @@ static t_bool	there_is_base_errors(char *base)
 	while (i < base_len)
 	{
 		if (ft_isspace(base[i]))
-			return (my_true);
+			return (true);
 		if (base[i] == '+' || base[i] == '-')
-			return (my_true);
+			return (true);
 		j = i + 1;
 		while (j < base_len)
 		{
@@ -69,7 +69,7 @@ static t_bool	there_is_base_errors(char *base)
 		}
 		i++;
 	}
-	return (my_false);
+	return (false);
 }
 
 static int	find_digit_on_base(char digit, char *base)

@@ -74,7 +74,7 @@ char	*ft_strchr(const char *str, int c);
  * @brief This functions founds the last occurrence of an c character in a
  * string.
  *
- * @param s The string to search
+ * @param str The string to search
  * @param c The character to search for in the string
  * @return Returns a pointer to the last occurrence
  * of the character if found.

@@ -18,6 +18,7 @@
 # include <stdint.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdbool.h>
 
 // Related headers
 # include "ft_char.h"
@@ -65,10 +66,4 @@ typedef int32_t		t_4byte_i;
 // Signed 8 bytes (64 bits)
 typedef int64_t		t_8byte_i;
 
-// Enum to representing boolean values
-typedef enum e_bool
-{
-	my_false,
-	my_true
-}					t_bool;
 #endif
