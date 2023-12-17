@@ -87,4 +87,11 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
  */
 void	ft_swap(void *a, void *b, size_t size);
 
+/**
+ * @brief This function frees a matrix
+ * @param matrix The matrix to be freed
+ * @param size The size of the matrix
+ */
+void	ft_free_matrix(void **matrix, int size);
+
 #endif // FT_MEM_H
