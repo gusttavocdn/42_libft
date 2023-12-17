@@ -26,7 +26,7 @@
  * @return The size buffer has to be to store the concatenation,
  *	without count the NULL terminator
  */
-size_t	ft_strlcat(char *dst, const char *src, size_t size);
+size_t ft_strlcat(char *dst, const char *src, size_t size);
 
 /**
  * @brief This functions copy a string from a src to a dst buffer.
@@ -37,7 +37,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size);
  * in consideration in the size.
  * @return Return the length of the string that is tried to be copied.
  */
-size_t	ft_strlcpy(char *dst, const char *src, size_t size);
+size_t ft_strlcpy(char *dst, const char *src, size_t size);
 
 /**
  * @brief This functions scan an string searching for a substring at n bytes
@@ -49,7 +49,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size);
  * @return NULL if the substring is not found. Returns the original string if
  * we pass an empty substring
  */
-char	*ft_strnstr(const char *big, const char *little, size_t len);
+char *ft_strnstr(const char *big, const char *little, size_t len);
 
 // Function from <string.h> library
 
@@ -57,7 +57,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
  * @brief Calculate the length of a string.
  * @return The length of the string. Don't count the null terminator.
  */
-size_t	ft_strlen(const char *s);
+size_t ft_strlen(const char *s);
 
 /**
  * @brief This functions founds an c character in a string.
@@ -68,7 +68,7 @@ size_t	ft_strlen(const char *s);
  * @return Returns NULL if not found.
  * @return If c == '\0' returns a pointer to the end of the string.
  */
-char	*ft_strchr(const char *str, int c);
+char *ft_strchr(const char *str, int c);
 
 /**
  * @brief This functions founds the last occurrence of an c character in a
@@ -81,7 +81,7 @@ char	*ft_strchr(const char *str, int c);
  *  Returns NULL if not found.
  * If c == '\0' returns a pointer to the end of the string.
  */
-char	*ft_strrchr(const char *str, int c);
+char *ft_strrchr(const char *str, int c);
 
 /**
  * @brief Compares two strings and returns the result for s1 - s2
@@ -91,7 +91,7 @@ char	*ft_strrchr(const char *str, int c);
  * @param n Says until we want to compare the two strings
  * @return The result of the comparison
  */
-int		ft_strncmp(const char *s1, const char *s2, size_t n);
+int ft_strncmp(const char *s1, const char *s2, size_t n);
 
 /**
  * @brief This functions returns a pointer to a copy of a
@@ -100,7 +100,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
  * @return Returns a pointer to the new string.
  * Returns NULL if insufficient memory is available
  */
-char	*ft_strdup(const char *s);
+char *ft_strdup(const char *s);
 
 // Functions from <stdlib.h> library
 
@@ -114,14 +114,14 @@ char	*ft_strdup(const char *s);
  * @param len The max length of the substring
  * @return Returns the substring or NULL if fails.
  */
-char	*ft_substr(char const *s, unsigned int start, size_t len);
+char *ft_substr(char const *s, unsigned int start, size_t len);
 
 /**
  * @brief This functions allocates and returns a new string
  * which is the concatenation of s1 and s2
  * @return Returns the new string or NULL if fails
  */
-char	*ft_strjoin(char const *s1, char const *s2);
+char *ft_strjoin(char const *s1, char const *s2);
 
 /**
  * @brief This functions returns a new string with chars
@@ -131,7 +131,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
  * @param set Chars to trim from the string
  * @return Returns the new string or NULL if malloc fails.
  */
-char	*ft_strtrim(char const *s1, char const *set);
+char *ft_strtrim(char const *s1, char const *set);
 
 /**
  * @brief Applies the function ’f’ to each character of the
@@ -143,7 +143,7 @@ from successive application of "F"
  * @param f The function to apply to each character.
  * @return The string created from the successive applications of "F"
  */
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 /**
  * @brief This function applies the function "f" on each character of
@@ -154,7 +154,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
  * @param s The string on which to iterate
  * @param f The function to apply to each character
  */
-void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+void ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 /**
  * @brief This function returns an array
@@ -166,6 +166,13 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *));
  * @return The array of new strings resulting from the split.
  * NULL if the allocation fails.
  */
-char	**ft_split(char const *s, char c);
+char **ft_split(char const *s, char c);
+
+/**
+ * @brief This function gets two string pointers swap the locations and free the old pointer.
+ * @param old_pointer The pointer to the old string
+ * @param new_string The new string to be swapped
+ */
+void ft_swap_str_pointers(char **old_pointer, char *new_string);
 
 #endif // FT_STRINGS_H

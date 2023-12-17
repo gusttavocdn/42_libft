@@ -6,11 +6,11 @@
 /*   By: gusda-si <gusda-si@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 12:10:29 by gusda-si          #+#    #+#             */
-/*   Updated: 2023/11/19 21:41:03 by gusda-si         ###   ########.fr       */
+/*   Updated: 2023/12/10 22:30:13 by gusda-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/ft_printf.h"
+#include "../../includes/libft.h"
 
 static int	print_format(const char *str, va_list args);
 

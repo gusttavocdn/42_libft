@@ -14,11 +14,11 @@
 # define FT_MATH_H
 
 // Standard Library headers
-//# include <stdio.h>
-//# include <unistd.h>
+//# includes <stdio.h>
+//# includes <unistd.h>
 
 // Related headers
-//# include "libft.h"
+//# includes "libft.h"
 
 // Function declarations
 
@@ -26,7 +26,7 @@
  * @brief This function converts a string in a number that
  * can be stored in a int variable.
  */
-int		ft_atoi(const char *s);
+int ft_atoi(const char *s);
 
 /**
  * @brief This functions returns a string representing the integer received
@@ -35,7 +35,7 @@ int		ft_atoi(const char *s);
  * @param n The integer to convert
  * @return The string representing the integer. NULL if malloc fails.
  */
-char	*ft_itoa(int n);
+char *ft_itoa(int n);
 
 /**
  * @brief This function converts a string in a number that
@@ -46,7 +46,7 @@ char	*ft_itoa(int n);
  * @return The number converted. If the base is invalid,
  * the function returns 0.
 */
-int		ft_atoi_base(char *str, char *base);
+int ft_atoi_base(char *str, char *base);
 
 /**
  * @brief This function converts a number in a string
@@ -56,7 +56,7 @@ int		ft_atoi_base(char *str, char *base);
  * @return A pointer allocated with malloc to a string
  * address representing the number in the given base.
 */
-char	*ft_itoa_base(long int number, char *base);
+char *ft_itoa_base(long int number, char *base);
 
 /**
  * @brief this function calculates how many digits is necessary
@@ -64,7 +64,7 @@ char	*ft_itoa_base(long int number, char *base);
  * @param number the number
  * @param base_len the base length
 */
-int		ft_calc_nbr_digits(long int number, int base_len);
+int ft_calc_nbr_digits(long int number, int base_len);
 
 /**
  * @brief This function converts a string in a base to another base.
@@ -74,14 +74,14 @@ int		ft_calc_nbr_digits(long int number, int base_len);
  * @return A pointer allocated with malloc to a string
  * address represeting the number in the given base.
 */
-char	*ft_convert_base(char *nbr, char *base_from, char *base_to);
+char *ft_convert_base(char *nbr, char *base_from, char *base_to);
 
 /**
  * @brief This function returns the absolute value of a number.
  * @param number The number to be converted.
  * @return The absolute value of the number.
 */
-int		ft_abs(int number);
+int ft_abs(int number);
 
 /**
  * @brief This function converts a number in a string
@@ -89,6 +89,6 @@ int		ft_abs(int number);
  * @param base the base
  * @return A pointer allocated with malloc to a string
  */
-char	*ft_itoa_base_u(unsigned long number, char *base);
+char *ft_itoa_base_u(unsigned long number, char *base);
 
 #endif // FT_MATH_H
