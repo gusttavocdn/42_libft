@@ -5,26 +5,35 @@
 NAME      := libft.a
 EXE       := main
 CC        := cc
-CFLAGS    := -Wall -Wextra -Werror
+CFLAGS    := -Wall -Wextra -Werror -g
 
 ################################################################################
 #                                 PROGRAM'S SRCS                               #
 ################################################################################
 
 HEADERS := $(addprefix ./includes/, libft.h)
-SRCS := $(addprefix ./src/, ft_isalpha.c ft_isdigit.c ft_isalnum ft_isascii ft_isprint.c \
-						 	ft_toupper.c ft_tolower.c ft_isspace.c ft_islower.c ft_isupper.c \
-						 	ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c \
-						 	ft_memmove.c ft_strlcpy.c ft_strlcat.c ft_strchr.c ft_strrchr.c \
-						 	ft_strncmp.c ft_ftmemchr.c ft_memcmp.c ft_strnstr.c ft_atoic.c)
+SRCS := $(addprefix ./src/, ft_isascii.c ft_free_matrix.c ft_memcpy.c ft_isalpha.c ft_tolower.c \
+							ft_gnl.c ft_memcmp.c ft_isprint.c ft_isdigit.c ft_atoi_base.c ft_memset.c \
+							ft_swap_str_pointers.c ft_isupper.c ft_putchar_fd.c ft_memmove.c ft_swap.c \
+							ft_isspace.c ft_itoa_base.c ft_bzero.c ft_strnstr.c ft_split.c \
+							ft_putnbr_unsigned_fd.c ft_strncmp.c ft_abs.c ft_itoa_base_u.c ft_strlcat.c \
+							ft_islower.c ft_putnbr_fd.c ft_toupper.c ft_calc_nbr_digits.c \
+							ft_putnbr_base.c ft_itoa.c ft_convert_base.c ft_memchr.c ft_striteri.c \
+							ft_strrchr.c ft_strjoin.c ft_strtrim.c ft_strdup.c ft_calloc.c ft_strlcpy.c \
+							ft_strchr.c ft_substr.c ft_putstr_fd.c ft_putmem_fd.c ft_strmapi.c \
+                            ft_strlen.c ft_isalnum.c ft_atoi.c)
 
 
 OBJS := $(SRCS:./src/%.c=./obj/%.o)
 
 
-obj/%.o: $(SRCS) $(HEADERS)
+obj/%.o: src/%.c $(HEADERS)
 	@mkdir -p $(dir $@)
 	$(CC) -c $(CFLAGS) -o $@ $<
+
+#src/%.c.obj/%.o:
+#	@echo "$(CYAN)Compiling $(YELLOW)$(notdir $<)$(CLR_RMV)..."
+#	${CC} ${CFLAGS} -c $< -o $@ -I ./includes
 
 ################################################################################
 #                                  Makefile  objs                              #
@@ -45,9 +54,6 @@ ${NAME}: $(OBJS) $(HEADERS)
 		@ar -rcs ${NAME} ${OBJS} ${HEADERS}
 		@echo "$(GREEN)$(NAME) created[0m ✔️"
 
-run: all
-		@echo "$(GREEN)Running ${CLR_RMV}$(MAIN) ${CLR_RMV}..."
-		@$(CC) $(CFLAGS) -o $(EXE) $(EXE).c $(NAME)
 
 clean:
 			@${RM} ${OBJS} obj ${EXE}
@@ -63,5 +69,10 @@ print:
 	@echo "SRCS: $(SRCS)"
 	@echo "OBJS: $(OBJS)"
 	@echo "HEADERS: $(HEADERS)"
+
+run: all
+	@echo "$(GREEN)Running ${CLR_RMV}$(MAIN) ${CLR_RMV}..."
+	@$(CC) $(CFLAGS) -o $(EXE) $(EXE).c src/*.c -I ./includes
+	@#./$(EXE)
 
 .PHONY:		all clean fclean re print

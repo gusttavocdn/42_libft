@@ -3,10 +3,17 @@
 
 #include <stdlib.h>
 #include <stdint.h>
+#include <unistd.h>
+#include <stdbool.h>
 
 // CONSTANTS
 
+#define BUFFER_SIZE 4096
 #define NULL_BYTE 1
+#define TRUE 1
+#define FALSE 0
+#define HEX_SIZE 16
+#define HEX_LOWER "0123456789abcdef"
 
 // Char Functions
 
@@ -159,8 +166,6 @@ char *ft_strdup(const char *s);
 
 // Functions from <stdlib.h> library
 
-// "Original" functions from libft
-
 /**
  * @brief This functions allocates with calloc
  * and returns a substring from the string 's'
@@ -224,6 +229,13 @@ void ft_striteri(char *s, void (*f)(unsigned int, char *));
 char **ft_split(char const *s, char c);
 
 // Memory Functions
+
+/**
+ * @brief This function gets two string pointers swap the locations and free the old pointer.
+ * @param old_pointer The pointer to the old string
+ * @param new_string The new string to be swapped
+ */
+void ft_swap_str_pointers(char **old_pointer, char *new_string);
 
 /**
  * @brief This function erases some memory area. The area to be
@@ -349,7 +361,7 @@ int ft_calc_nbr_digits(long int number, int base_len);
  * @param base_from The initial base.
  * @param base_to The base to be converted.
  * @return A pointer allocated with malloc to a string
- * address represeting the number in the given base.
+ * address representing the number in the given base.
 */
 char *ft_convert_base(char *nbr, char *base_from, char *base_to);
 
@@ -367,5 +379,62 @@ int ft_abs(int number);
  * @return A pointer allocated with malloc to a string
  */
 char *ft_itoa_base_u(unsigned long number, char *base);
+
+// Input and Output Functions
+
+/**
+ * @brief Outputs the char "c" to the given file descriptor
+ *
+ * @param c The char to output
+ * @param fd the file descriptor on which to write
+ */
+ssize_t ft_putchar_fd(char c, int fd);
+
+/**
+ * @brief Outputs the string "s" to the given file descriptor
+ *
+ * @param s The string to output
+ * @param fd The file descriptor on which to write
+ */
+ssize_t ft_putstr_fd(char *s, int fd);
+
+/**
+ * @brief Outputs the integer "n" to the given fd
+ *
+ * @param n The number to output
+ * @param fd The file descriptor on which to write
+ */
+ssize_t ft_putnbr_fd(long int n, int fd);
+
+/**
+ * @brief Outputs the integer "nbr" to the given fd
+ * using the given "base" as the base for the conversion.
+*/
+
+ssize_t ft_putnbr_base(long int nbr, char *base, int fd);
+
+/**
+ 	@brief Reads a line from a file descriptor.
+	@param fd File descriptor.
+	@return A pointer to the line read from the file descriptor.
+	@details This functions is capable of handle multiple fd at once.
+*/
+char *ft_gnl(int fd);
+
+/**
+ * @brief Outputs the unsigned integer "n" to the given fd
+ * @param n The number to output
+ * @param fd The file descriptor on which to write
+ * @return The number of bytes written
+*/
+ssize_t ft_putnbr_unsigned_fd(unsigned int n, int fd);
+
+/**
+ * @brief Outputs a memory address to the given fd
+ * @param number The memory address to output
+ * @param fd The file descriptor on which to write
+ */
+ssize_t ft_putmem_fd(unsigned long number, int fd);
+
 
 #endif //FT_LIBFT_H
