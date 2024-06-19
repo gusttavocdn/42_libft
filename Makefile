@@ -11,7 +11,8 @@ CFLAGS    := -Wall -Wextra -Werror -g
 #                                 PROGRAM'S SRCS                               #
 ################################################################################
 
-HEADERS := $(addprefix ./includes/, libft.h)
+HEADERS := $(addprefix ./includes/, libft.h linked_list.h)
+
 SRCS := $(addprefix ./src/, ft_isascii.c ft_free_matrix.c ft_memcpy.c ft_isalpha.c ft_tolower.c \
 							ft_gnl.c ft_memcmp.c ft_isprint.c ft_isdigit.c ft_atoi_base.c ft_memset.c \
 							ft_swap_str_pointers.c ft_isupper.c ft_putchar_fd.c ft_memmove.c ft_swap.c \
@@ -23,17 +24,20 @@ SRCS := $(addprefix ./src/, ft_isascii.c ft_free_matrix.c ft_memcpy.c ft_isalpha
 							ft_strchr.c ft_substr.c ft_putstr_fd.c ft_putmem_fd.c ft_strmapi.c \
                             ft_strlen.c ft_isalnum.c ft_atoi.c)
 
+LINKED_LIST_SRCS := $(addprefix ./src/linked_list/, linked_list.c memory_management.c)
+
 
 OBJS := $(SRCS:./src/%.c=./obj/%.o)
+LINKED_LIST_OBJS := $(LINKED_LIST_SRCS:./src/linked_list/%.c=./obj/%.o)
 
 
 obj/%.o: src/%.c $(HEADERS)
 	@mkdir -p $(dir $@)
 	$(CC) -c $(CFLAGS) -o $@ $<
 
-#src/%.c.obj/%.o:
-#	@echo "$(CYAN)Compiling $(YELLOW)$(notdir $<)$(CLR_RMV)..."
-#	${CC} ${CFLAGS} -c $< -o $@ -I ./includes
+obj/%.o: src/linked_list/%.c $(HEADERS)
+	@mkdir -p $(dir $@)
+	$(CC) -c $(CFLAGS) -o $@ $<
 
 ################################################################################
 #                                  Makefile  objs                              #
@@ -49,9 +53,9 @@ RM		    := rm -rf
 
 all: ${NAME}
 
-${NAME}: $(OBJS) $(HEADERS)
+${NAME}: $(OBJS) $(LINKED_LIST_OBJS) $(HEADERS)
 		@echo "$(GREEN)Creating ${CLR_RMV}of ${YELLOW}$(NAME) ${CLR_RMV}..."
-		@ar -rcs ${NAME} ${OBJS} ${HEADERS}
+		@ar -rcs ${NAME} ${OBJS} ${LINKED_LIST_OBJS} ${HEADERS}
 		@echo "$(GREEN)$(NAME) created[0m ✔️"
 
 
@@ -70,9 +74,9 @@ print:
 	@echo "OBJS: $(OBJS)"
 	@echo "HEADERS: $(HEADERS)"
 
-run: all
+run:
 	@echo "$(GREEN)Running ${CLR_RMV}$(MAIN) ${CLR_RMV}..."
-	@$(CC) $(CFLAGS) -o $(EXE) $(EXE).c src/*.c -I ./includes
+	@$(CC) $(CFLAGS) -o $(EXE) $(EXE).c src/*.c src/linked_list/*.c -I ./includes
 	@#./$(EXE)
 
 .PHONY:		all clean fclean re print
